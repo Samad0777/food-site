@@ -1,0 +1,17 @@
+@font-face {
+    font-family: semibold;
+    src: url("./assets/fonts/PlayfairDisplay-SemiBoldItalic.ttf");
+}
+
+@font-face {
+    font-family: dmsans;
+    src: url("./assets/fonts/DMSans_18pt-Medium.ttf");
+}
+
+@import "tailwindcss";
+
+@theme{
+    --color-primary:#474747;
+    --font-dmsans:dmsans , sans-serif;
+    --font-semibold:semibold , sans-serif;
+}
