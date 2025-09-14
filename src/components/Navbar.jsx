@@ -9,7 +9,7 @@ const Navbar = () => {
 
   return (
     <>
-    <nav className='hidden border md:flex items-center justify-around text-primary'>
+    <nav className='hidden md:flex items-center justify-around text-primary'>
 
         <div className="logo flex items-center">
             <img src={logo} alt="logo" /> 
@@ -18,30 +18,42 @@ const Navbar = () => {
             </h2>
         </div>
 
-        <ul className='flex space-x-6 bg-[#DBDFD0] font-dmsans'>
+        <ul className='flex lg:space-x-6 font-dmsans'>
+
             <Link to="/">
-            <li className='cursor-pointer'>Home</li>
+            <li className='cursor-pointer hover:bg-[#DBDFD0] rounded-2xl px-4 py-1'>
+              Home
+              </li>
             </Link>
 
             <Link to="/about">
-            <li className='cursor-pointer'>About</li>
+            <li className='cursor-pointer hover:bg-[#DBDFD0] rounded-2xl px-4 py-1'>
+              About
+              </li>
             </Link>
 
             <Link to="/menu">
-            <li className='cursor-pointer'>Menu</li>
+            <li className='cursor-pointer hover:bg-[#DBDFD0] rounded-2xl px-4 py-1'>
+              Menu
+              </li>
             </Link>
 
             <Link to="/pages">
-            <li className='cursor-pointer'>Pages</li>
+            <li className='cursor-pointer hover:bg-[#DBDFD0] rounded-2xl px-4 py-1'>
+              Pages
+              </li>
             </Link>
 
             <Link to="/contact">
-            <li className='cursor-pointer'>Contact</li>
+            <li className='cursor-pointer hover:bg-[#DBDFD0] rounded-2xl px-4 py-1'>
+              Contact
+              </li>
             </Link>
 
         </ul>
 
-        <button className='text-sm font-bold border rounded-3xl px-5 py-2 cursor-pointer'>
+        <button className='text-sm font-bold border rounded-3xl px-5 py-2 cursor-pointer
+        transition-all duration-300 ease-in-out hover:bg-primary hover:text-white'>
             Book A Table
             </button>
 
@@ -51,7 +63,7 @@ const Navbar = () => {
 
    
 
-    <nav className='relative md:hidden flex justify-between items-center border px-2 py-1.5'>
+    <nav className='relative  md:hidden flex justify-between items-center border px-2 py-1.5'>
 
 
     <div className="logo flex items-center">

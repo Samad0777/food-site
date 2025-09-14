@@ -8,10 +8,18 @@
     src: url("./assets/fonts/DMSans_18pt-Medium.ttf");
 }
 
+@font-face {
+    font-family: dmsans-reg;
+    src: url("./assets/fonts/PlayfairDisplay-Regular.ttf");
+}
+
 @import "tailwindcss";
 
 @theme{
     --color-primary:#474747;
+    --color-secondary:#2C2F24;
+    --color-red-primary:#AD343E;
     --font-dmsans:dmsans , sans-serif;
+    --font-dmsans-reg:dmsans-reg , sans-serif;
     --font-semibold:semibold , sans-serif;
 }
