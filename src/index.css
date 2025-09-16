@@ -23,3 +23,8 @@
     --font-dmsans-reg:dmsans-reg , sans-serif;
     --font-semibold:semibold , sans-serif;
 }
+
+html, body{
+    background-color: #F9F9F7;
+    scroll-behavior: smooth;
+}

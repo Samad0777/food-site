@@ -52,7 +52,7 @@ const Navbar = () => {
 
         </ul>
 
-        <button className='text-sm font-bold border rounded-3xl px-5 py-2 cursor-pointer
+        <button className='text-sm font-bold border rounded-3xl xl:px-4  px-2 py-2 cursor-pointer
         transition-all duration-300 ease-in-out hover:bg-primary hover:text-white'>
             Book A Table
             </button>
