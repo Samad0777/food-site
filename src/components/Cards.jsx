@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 const Cards = () => {
   const CardData = [
@@ -146,10 +147,13 @@ const Cards = () => {
     <>
       {CardData.map((items, index) => {
         return (
+          <div className="mt-6 mb-6"
+          key={items.id}>
+
           <div
-            key={items.id}
+            
             className="shadow-2xl flex flex-col justify-around items-center 
-      px-2 py-2 text-center h-[50vh] rounded-2xl"
+            px-2 py-2 text-center h-[50vh] rounded-2xl"
           >
             <div className="flex justify-center items-center">{items.img}</div>
 
@@ -161,12 +165,15 @@ const Cards = () => {
               <p className="text-[#414536] font-dmsans py-2">{items.desc}</p>
             </div>
 
-            <button
+          <Link to='/menu'>
+          <button
               className="text-red-primary cursor-pointer font-dmsans
-    transition duration-200 ease-in-out hover:text-[#991e28] hover:scale-95"
-            >
+              transition duration-200 ease-in-out hover:text-[#991e28] hover:scale-95"
+              >
               Explore Menu
             </button>
+          </Link>  
+              </div>
           </div>
         );
       })}

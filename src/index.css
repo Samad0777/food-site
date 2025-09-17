@@ -13,6 +13,11 @@
     src: url("./assets/fonts/PlayfairDisplay-Regular.ttf");
 }
 
+@font-face {
+    font-family: playfair;
+    src: url("./assets/fonts/PlayfairDisplay-Medium.ttf");
+}
+
 @import "tailwindcss";
 
 @theme{
@@ -20,6 +25,7 @@
     --color-secondary:#2C2F24;
     --color-red-primary:#AD343E;
     --font-dmsans:dmsans , sans-serif;
+    --font-playfair:playfair , sans-serif;
     --font-dmsans-reg:dmsans-reg , sans-serif;
     --font-semibold:semibold , sans-serif;
 }
