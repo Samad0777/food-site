@@ -13,7 +13,15 @@ import Dish2 from "../assets/images/F-1.png";
 import T1 from "../assets/images/T-1.png";
 import T2 from "../assets/images/T-2.png";
 import T3 from "../assets/images/T-3.png";
-import { address, h1 } from "motion/react-client";
+import burger from "../assets/images/Burger.png"
+import pizza from "../assets/images/Pizza.png"
+import pancake from "../assets/images/Pancakes.png"
+import fries from "../assets/images/Fries.png"
+import cupcake from "../assets/images/cup-cake.png"
+import CheeseGyudon from "../assets/images/Cheese Gyudon.png"
+import ParmesanTruffleFries from "../assets/images/Parmesan Truffle Fries.png"
+import SweetPotatoFries from "../assets/images/Sweet Potato Fries..png"
+import friedchicken from "../assets/images/fried-chicken.png"
 
 const Home = () => {
   const CardData1 = [
@@ -79,6 +87,58 @@ const Home = () => {
       }
 
     ];
+
+    const blogData1 = [
+
+      {
+      id:1,
+      img:burger,
+      date:"January 3, 2023",
+      title:"The secret tips & tricks to prepare a perfect burger & pizza for our customers",
+      desc:`Lorem ipsum dolor sit amet consectetur of a adipiscing elitilmim semper adipiscing
+       massa gravida nisi cras enim quis nibholm varius amet gravida ut facilisis neque egestas.`
+    }
+
+    ];
+
+  const blogCardsData = [
+
+    {
+      id:1,
+      img:ParmesanTruffleFries,
+      date:"January 3, 2023",
+      title:"How to prepare the perfect french fries in an air fryer",
+      desc:`Lorem ipsum dolor sit amet consectetur of a adipiscing elitilmim semper adipiscing
+       massa gravida nisi cras enim quis nibholm varius amet gravida ut facilisis neque egestas.`
+    },
+
+    {
+      id:2,
+      img:friedchicken,
+      date:"January 3, 2023",
+      title:"How to prepare delicious chicken tenders",
+      desc:`Lorem ipsum dolor sit amet consectetur of a adipiscing elitilmim semper adipiscing
+       massa gravida nisi cras enim quis nibholm varius amet gravida ut facilisis neque egestas.`
+    },
+
+    {
+      id:3,
+      img:cupcake,
+      date:"January 3, 2023",
+      title:"7 delicious cheesecake recipes you can prepare",
+      desc:`Lorem ipsum dolor sit amet consectetur of a adipiscing elitilmim semper adipiscing
+       massa gravida nisi cras enim quis nibholm varius amet gravida ut facilisis neque egestas.`
+    },
+
+    {
+      id:4,
+      img:pizza,
+      date:"January 3, 2023",
+      title:"5 great pizza restaurants you should visit this city",
+      desc:`Lorem ipsum dolor sit amet consectetur of a adipiscing elitilmim semper adipiscing
+       massa gravida nisi cras enim quis nibholm varius amet gravida ut facilisis neque egestas.`
+    },
+  ]
  
   return (
     <>
@@ -445,7 +505,7 @@ const Home = () => {
 
       {/* testimonial section started here  */}
 
-      <section className="h-auto flex justify-center mt-24 items-center">
+      <section className="h-auto flex justify-center mt-40 items-center">
         <div className="container h-[90%] w-[95%]">
           <div>
             <h3 className="font-playfair text-2xl text-center py-4 md:text-4xl">
@@ -501,7 +561,104 @@ const Home = () => {
       </section>
 
       {/* testimonial section ended here  */}
-      
+
+
+      {/* Our Blogs And Articles section Started  */}
+
+        <section className="h-auto border border-green-700 mt-24 flex justify-center items-center">
+            <div className="border border-red-700 h-[90%] w-[97%] md:w-[90%]">
+
+              <div className="md:flex items-center justify-between py-4 px-2">
+                <h3 className="font-playfair text-2xl md:text-3xl text-center">
+                  Our Blog & Articles
+                </h3>
+
+                <div className="text-center my-8">
+                <button className="cursor-pointer font-dmsans text-white bg-red-primary 
+                          transition-all duration-300 ease-in-out hover:text-gray-200 active:scale-95 hover:scale-95
+                           hover:bg-[#991e28] rounded-4xl py-4 px-4">
+                  Read All Articles
+                </button>
+                </div>
+
+              </div>
+
+              <div className="grid grid-cols-1 grid-row-5 md:grid-cols-1
+               md:grid-row-2 lg:grid-cols-2 lg:grid-row-1">
+                <div className="">
+                  {blogData1.map((items , index)=>{
+                  return (
+              <Link to='/pages'>
+              
+                <div key={items.id} className="m-4 cursor-pointer hover:scale-95 transition-all ease-in-out duration-300">
+                  <div
+                    className="shadow-2xl flex flex-col items-center justify-center
+                              px-2 py-12 text-center w-[100%] h-[100%]  rounded-2xl"
+                  >
+                    <div className="px-2 py-2 text-left w-full">
+                     <img className="rounded-2xl"
+                      src={items.img}
+                      
+                      alt="customerImg"
+                    /> 
+                    <p className="py-3">
+                      {items.date}
+                    </p>
+
+                      <h3 className="font-dmsans text-secondary text-2xl">
+                        {items.title}
+                      </h3>
+
+
+                    <div className="px-2 py-4">
+                      <p className="text-[#414536] font-dmsans tracking-wide py-4 text-left">{items.desc}</p>
+                    </div>
+
+
+                    </div>
+                  </div>
+                </div></Link>
+              );
+                })}
+                </div>
+
+                <div className="grid md:grid-cols-2 md:grid-rows-2 lg:grid-cols-2 lg:grid-rows-2">
+
+                {blogCardsData.map((items , index)=>{
+                  return (
+                <div key={items.id} className="m-4 cursor-pointer hover:scale-95 transition-all ease-in-out duration-300">
+                  <div
+                    className="shadow-2xl flex flex-col items-center justify-center
+                              px-2 py-12 text-center w-[100%] h-[100%]  rounded-2xl"
+                  >
+                    <div className="px-2 py-2 text-left w-full">
+                     <img className="rounded-2xl"
+                      src={items.img}
+                      
+                      alt="customerImg"
+                    /> 
+                    <p className="py-3">
+                      {items.date}
+                    </p>
+
+                      <h3 className="font-dmsans text-secondary text-2xl">
+                        {items.title}
+                      </h3>
+
+
+                    </div>
+                  </div>
+                </div>
+              );
+                })}
+                </div>
+              </div>
+
+            </div>
+        </section>
+
+      {/* Our Blogs And Articles section ended  */}
+
     </>
   );
 };
