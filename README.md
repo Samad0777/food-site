@@ -19,6 +19,7 @@ Focus on writing clean, reusable components
 
 ✅ Header (Home page) Completed
 ✅ Menu Section (part of Home page) Completed
+✅ Online-service Section (part of Home page) Completed
 🚧 Home Page (remaining sections in progress)
 🚧 Responsive layout (applied on completed sections, rest ongoing)
 🚧 About, Menu Page, Contact Page (next on the list)
