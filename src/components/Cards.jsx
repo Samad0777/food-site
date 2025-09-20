@@ -147,7 +147,7 @@ const Cards = () => {
     <>
       {CardData.map((items, index) => {
         return (
-          <div className="mt-6 mb-6"
+          <div className="mt-6 mb-6 cursor-pointer hover:scale-95 transition-all ease-in-out duration-300"
           key={items.id}>
 
           <div

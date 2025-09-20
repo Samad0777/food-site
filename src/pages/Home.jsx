@@ -10,6 +10,10 @@ import Mask4 from "../assets/images/Mask group-2.jpg";
 import Chef from "../assets/images/cheff.jpg";
 import Dish1 from "../assets/images/F-2.png";
 import Dish2 from "../assets/images/F-1.png";
+import T1 from "../assets/images/T-1.png";
+import T2 from "../assets/images/T-2.png";
+import T3 from "../assets/images/T-3.png";
+import { address, h1 } from "motion/react-client";
 
 const Home = () => {
   const CardData1 = [
@@ -42,6 +46,40 @@ const Home = () => {
     },
   ];
 
+  const testimonialData = 
+    [
+      {
+        id: 1,
+        img: T1,
+        desc: `Last night, we dined at place and were simply blown away. From the moment we stepped in,
+         we were enveloped in an inviting atmosphere and greeted with warm smiles.`,
+        title: "“The best restaurant”",
+        name: "Sophire Robson",
+        address: "Los Angeles, CA",
+      },
+
+      {
+        id: 2,
+        img: T2,
+        desc: `Place exceeded my expectations on all fronts. The ambiance was cozy and relaxed, making it a perfect venue for
+         our anniversary dinner. Each dish was prepared and beautifully presented.`,
+        title: "“Simply delicious”",
+        name: "Matt Cannon",
+        address: "San Diego, CA",
+      },
+
+      {
+        id: 3,
+        img: T3,
+        desc: `The culinary experience at place is first to none. The atmosphere is vibrant,
+         the food - nothing short of extraordinary. The food was the highlight of our evening. Highly recommended.`,
+        title: "“One of a kind restaurant”",
+        name: "Andy Smith",
+        address: "San Francisco, CA",
+      }
+
+    ];
+ 
   return (
     <>
       {/* HERO SECTION STARTED  */}
@@ -266,7 +304,7 @@ const Home = () => {
           >
             {CardData1.map((items, index) => {
               return (
-                <div key={items.id} className="m-4">
+                <div key={items.id} className="m-4 cursor-pointer hover:scale-95 transition-all ease-in-out duration-300">
                   <div
                     className="shadow-2xl flex flex-col items-center justify-center
       px-2 py-2 text-center w-[98%] h-[100%]  rounded-2xl"
@@ -299,7 +337,6 @@ const Home = () => {
 
       <section className="h-auto mt-28 w-[100%] flex items-center justify-center">
         <div className="flex flex-col md:flex-row lg:items-center lg:flex-grow  lg:h-[80%] w-full md:w-[90%]">
-
           <div className="left h-auto flex items-center justify-center p-4 w-auto">
             <div className="md:w-[90%] grid sm:grid-cols-2 sm:grid-rows-1 md:grid-cols-2 md:grid-rows-1 gap-4 md:gap-1">
               <img
@@ -308,15 +345,25 @@ const Home = () => {
                 alt="chef"
               />
               <div className="px-4 space-y-4">
-                <img className="rounded-2xl  w-full h-auto" src={Dish1} alt="dish1" />
-                <img className="rounded-2xl  w-full h-auto" src={Dish2} alt="dish2" />
+                <img
+                  className="rounded-2xl  w-full h-auto"
+                  src={Dish1}
+                  alt="dish1"
+                />
+                <img
+                  className="rounded-2xl  w-full h-auto"
+                  src={Dish2}
+                  alt="dish2"
+                />
               </div>
             </div>
           </div>
 
           <div className="right lg:h-[85%] w-[90%] lg:w-[40%]">
             <div className="px-10 lg:px-4 py-8">
-              <h3 className="py-4 font-playfair text-secondary md:text-4xl text-2xl">Fastest Food Delivery in City</h3>
+              <h3 className="py-4 font-playfair text-secondary md:text-4xl text-2xl">
+                Fastest Food Delivery in City
+              </h3>
               <p className="font-dmsans text-primary py-4 px-2">
                 Our visual designer lets you quickly and of drag a down your way
                 to customapps for both keep desktop.
@@ -342,12 +389,10 @@ const Home = () => {
                       />
                     </svg>
                   </span>
-                  <p>
-                    Delivery within 30 minutes
-                  </p>
+                  <p>Delivery within 30 minutes</p>
                 </li>
 
-                <li  className="flex items-center space-x-2">
+                <li className="flex items-center space-x-2">
                   <span>
                     <svg
                       width="30"
@@ -366,9 +411,7 @@ const Home = () => {
                       />
                     </svg>
                   </span>
-                  <p>
-                    Best Offer & Prices
-                  </p>
+                  <p>Best Offer & Prices</p>
                 </li>
 
                 <li className="flex items-center space-x-2">
@@ -390,18 +433,75 @@ const Home = () => {
                       />
                     </svg>
                   </span>
-                    <p>
-                    Online Services Available
-                    </p>
+                  <p>Online Services Available</p>
                 </li>
               </ul>
             </div>
           </div>
-
         </div>
       </section>
 
       {/* online service section ended */}
+
+      {/* testimonial section started here  */}
+
+      <section className="h-auto flex justify-center mt-24 items-center">
+        <div className="container h-[90%] w-[95%]">
+          <div>
+            <h3 className="font-playfair text-2xl text-center py-4 md:text-4xl">
+              What Our Customers Say
+            </h3>
+          </div>
+
+          <div className="mt-6 grid grid-cols-1 grid-rows-3 gap-8 md:grid-cols-2 md:grid-rows-2 lg:grid-cols-3 lg:grid-rows-1">
+            {testimonialData.map((items,index)=>{
+              return (
+                <div key={items.id} className="m-4 cursor-pointer hover:scale-95 transition-all ease-in-out duration-300">
+                  <div
+                    className="shadow-2xl flex flex-col items-center justify-center
+                              px-2 py-12 text-center w-[100%] h-[100%]  rounded-2xl"
+                  >
+                    <div className="px-2 py-2 text-left w-full">
+
+                      <h3 className="font-dmsans text-red-primary text-2xl">
+                        {items.title}
+                      </h3>
+
+                    </div>
+
+                    <div className="px-2 py-4">
+                      <p className="text-[#414536] font-dmsans tracking-wide py-4 text-left">{items.desc}</p>
+                    </div>
+
+                    <div className="flex items-center ">
+                     <img
+                      src={items.img}
+                      
+                      alt="customerImg"
+                    /> 
+                    <div className="flex flex-col px-4">
+
+                      <h4 className="text-xl font-dmsans">
+                        {items.name}
+                      </h4>
+
+                      <p className="font-dmsans text-[#414536]">
+                        {items.address}
+                      </p>
+                    </div>
+
+                    </div>
+
+                  </div>
+                </div>
+              );
+            })};
+          </div>
+        </div>
+      </section>
+
+      {/* testimonial section ended here  */}
+      
     </>
   );
 };
