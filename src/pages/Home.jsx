@@ -15,13 +15,10 @@ import T2 from "../assets/images/T-2.png";
 import T3 from "../assets/images/T-3.png";
 import burger from "../assets/images/Burger.png"
 import pizza from "../assets/images/Pizza.png"
-import pancake from "../assets/images/Pancakes.png"
-import fries from "../assets/images/Fries.png"
 import cupcake from "../assets/images/cup-cake.png"
-import CheeseGyudon from "../assets/images/Cheese Gyudon.png"
 import ParmesanTruffleFries from "../assets/images/Parmesan Truffle Fries.png"
-import SweetPotatoFries from "../assets/images/Sweet Potato Fries..png"
 import friedchicken from "../assets/images/fried-chicken.png"
+import Footer from "../components/Footer";
 
 const Home = () => {
   const CardData1 = [
@@ -399,12 +396,14 @@ const Home = () => {
         <div className="flex flex-col md:flex-row lg:items-center lg:flex-grow  lg:h-[80%] w-full md:w-[90%]">
           <div className="left h-auto flex items-center justify-center p-4 w-auto">
             <div className="md:w-[90%] grid sm:grid-cols-2 sm:grid-rows-1 md:grid-cols-2 md:grid-rows-1 gap-4 md:gap-1">
+              
               <img
-                className="rounded-2xl overflow-hidden object-cover w-full h-auto"
+                className="rounded-2xl overflow-hidden object-cover w-full h-auto "
                 src={Chef}
                 alt="chef"
               />
-              <div className="px-4 space-y-4">
+
+              <div className="gap-4 md:px-4 grid grid-cols-2 grid-rows-1 sm:grid-cols-1 sm:grid-rows-2  md:grid-cols-1 md:grid-rows-2">
                 <img
                   className="rounded-2xl  w-full h-auto"
                   src={Dish1}
@@ -565,11 +564,11 @@ const Home = () => {
 
       {/* Our Blogs And Articles section Started  */}
 
-        <section className="h-auto border border-green-700 mt-24 flex justify-center items-center">
-            <div className="border border-red-700 h-[90%] w-[97%] md:w-[90%]">
+        <section className="h-auto mt-24 flex justify-center items-center">
+            <div className=" h-[90%] w-[97%] md:w-[90%]">
 
               <div className="md:flex items-center justify-between py-4 px-2">
-                <h3 className="font-playfair text-2xl md:text-3xl text-center">
+                <h3 className="font-playfair text-2xl md:text-4xl px-3 text-center">
                   Our Blog & Articles
                 </h3>
 
@@ -588,9 +587,9 @@ const Home = () => {
                 <div className="">
                   {blogData1.map((items , index)=>{
                   return (
-              <Link to='/pages'>
+              <Link key={items.id} to='/pages'>
               
-                <div key={items.id} className="m-4 cursor-pointer hover:scale-95 transition-all ease-in-out duration-300">
+                <div  className="m-4 cursor-pointer hover:scale-95 transition-all ease-in-out duration-300">
                   <div
                     className="shadow-2xl flex flex-col items-center justify-center
                               px-2 py-12 text-center w-[100%] h-[100%]  rounded-2xl"
