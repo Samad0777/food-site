@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import logo from '../assets/images/logo.png'
-import {Link} from 'react-router-dom'
+import {Link, NavLink} from 'react-router-dom'
 import MobileNav from './MobileNav';
 
 const Navbar = () => {
@@ -20,35 +20,35 @@ const Navbar = () => {
 
         <ul className='flex lg:space-x-6 font-dmsans'>
 
-            <Link to="/">
-            <li className='cursor-pointer hover:bg-[#DBDFD0] rounded-2xl px-4 py-1'>
+            <NavLink className={({isActive})=> `${isActive ? "bg-[#DBDFD0] rounded-2xl" : "bg-white" }`} to="/" >
+            <li className="cursor-pointer hover:bg-[#DBDFD0] rounded-2xl px-4 py-1">
               Home
               </li>
-            </Link>
+            </NavLink>
 
-            <Link to="/about">
-            <li className='cursor-pointer hover:bg-[#DBDFD0] rounded-2xl px-4 py-1'>
+            <NavLink className={({isActive})=> `${isActive ? "bg-[#DBDFD0] rounded-2xl" : "bg-white" }`} to="/about">
+            <li className="cursor-pointer hover:bg-[#DBDFD0] rounded-2xl px-4 py-1">
               About
               </li>
-            </Link>
+            </NavLink>
 
-            <Link to="/menu">
+            <NavLink className={({isActive})=> `${isActive ? "bg-[#DBDFD0] rounded-2xl" : "bg-white" }`} to="/menu">
             <li className='cursor-pointer hover:bg-[#DBDFD0] rounded-2xl px-4 py-1'>
               Menu
               </li>
-            </Link>
+            </NavLink>
 
-            <Link to="/pages">
+            <NavLink className={({isActive})=> `${isActive ? "bg-[#DBDFD0] rounded-2xl" : "bg-white" }`} to="/pages">
             <li className='cursor-pointer hover:bg-[#DBDFD0] rounded-2xl px-4 py-1'>
               Pages
               </li>
-            </Link>
+            </NavLink>
 
-            <Link to="/contact">
+            <NavLink className={({isActive})=> `${isActive ? "bg-[#DBDFD0] rounded-2xl" : "bg-white" }`} to="/contact">
             <li className='cursor-pointer hover:bg-[#DBDFD0] rounded-2xl px-4 py-1'>
               Contact
               </li>
-            </Link>
+            </NavLink>
 
         </ul>
 
