@@ -34,3 +34,14 @@ html, body{
     background-color: #F9F9F7;
     scroll-behavior: smooth;
 }
+
+.vide::before{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.918), transparent);
+    z-index: 5;
+}

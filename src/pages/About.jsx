@@ -1,8 +1,35 @@
 import React from 'react'
 import eggrice from "../assets/images/eggrice.png"
+import vidoeres from "../assets/video/restaurant-env.mp4"
 import { Link } from 'react-router-dom'
+import Timer from "../assets/images/timer 1.png"
+import checklist from "../assets/images/checklist.png"
+import menulist from "../assets/images/menulist.png"
 
 const About = () => {
+  const WhatweOfferData = [
+    {
+      id:1,
+      img:Timer,
+      title:"Multi Cuisine",
+      desc:"In the new era of technology we look in the future with certainty life."
+    },
+
+    {
+      id:2,
+      img:checklist,
+      title:"Easy To Order",
+      desc:"In the new era of technology we look in the future with certainty life."
+    },
+
+    {
+      id:3,
+      img:menulist,
+      title:"Fast Delivery",
+      desc:"In the new era of technology we look in the future with certainty life."
+    },
+  ];
+
   return (
     <>
     {/* Visit us section start here  */}
@@ -139,6 +166,80 @@ const About = () => {
       </section>
 
       {/* Visit us section Ended here  */}
+
+
+
+
+
+      {/* sample video section started  */}
+
+    <section className='h-[50vh] mt-32 sm:mt-4'>
+
+      <div className='relative w-full  h-[100%]'>
+
+      <div className='vide bg-black/20 opacity-90'>
+    <video autoPlay loop muted
+    className='absolute object-cover w-full h-[100%]'
+    src={vidoeres}>
+
+    </video>
+      </div>
+
+    <div  className='absolute flex w-full opacity-95 justify-center drop-shadow-lg
+     items-center text-[#ffffff] text-2xl md:text-4xl top-[50%] font-playfair'>
+    <p className='text-center '>
+      Feel the authentic & original taste from us
+    </p>
+    </div>
+
+      </div>
+    
+    </section>
+
+
+      <section className='h-auto'>
+
+
+   
+      <div className='h-auto px-4 py-4 grid grid-cols-1 grid-rows-3
+       md:grid-cols-2 md:grid-rows-2 lg:grid-cols-3 lg:grid-rows-1'>
+    
+      {WhatweOfferData.map((items,index)=>{
+        return (
+          <div key={items.id} className="m-4 cursor-pointer hover:scale-95 
+                transition-all ease-in-out duration-300">
+                  <div
+                    className="shadow-2xl flex flex-col items-center justify-center
+                    px-4 py-12 text-center w-[100%] h-auto  rounded-2xl"
+                  >
+                    <div className="flex items-center ">
+                     <img
+                      src={items.img}
+                      
+                      alt="customerImg"
+                      /> 
+                    <div className="flex flex-col px-4 space-y-4">
+
+                      <h4 className="text-xl font-dmsans">
+                        {items.title}
+                      </h4>
+
+                      <p className="font-dmsans text-[#414536]">
+                        {items.desc}
+                      </p>
+                    </div>
+
+                    </div>
+
+                  </div>
+                </div>
+              );
+            })}
+      </div>
+      </section>
+
+            {/* sample video section ended */}
+
     </>
   )
 }

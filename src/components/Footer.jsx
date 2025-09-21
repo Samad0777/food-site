@@ -9,7 +9,7 @@ import { Link } from "react-router-dom";
 const Footer = () => {
   return (
     <>
-      <footer className="h-auto py-10 flex flex-col justify-center items-center mt-40 bg-primary">
+      <footer className="h-auto py-8 flex flex-col justify-center items-center mt-40 bg-primary">
         <div className=" flex flex-col md:flex-row justify-between h-[80%] w-[80%]">
           <div className=" w-full">
             <div className="flex items-center">
@@ -113,57 +113,45 @@ const Footer = () => {
                 Pages
               </p>
 
-          <ul className="text-[#DBDFD0] flex flex-col gap-10">
+          <ul className="text-[#DBDFD0]">
 
-      
+      <li className="flex flex-col space-y-10">
          <Link to='/'>
-
-            <li>
               Home
-            </li>
 
          </Link>
 
          <Link to='/about'>
-            <li>
               About
-            </li>
          </Link>
 
         <Link to='/menu'>
-            <li>
               Menu
-            </li>
         </Link>
 
           <Link to='/pricing'>
-            <li>
               Pricing
-            </li>
+
           </Link>
 
           <Link to='/pages'>
-          
-            <li>
+        
               Blog
-            </li>
+ 
           </Link>
 
 
           <Link to='/contact'>
-
-            <li>
               Contact
-            </li>
+
           </Link>
 
         <Link to='menu'>
 
-             <li>
               Delivery
-            </li>
-        </Link>
 
+        </Link>
+</li>
           </ul>
 
             </div>
@@ -213,7 +201,7 @@ const Footer = () => {
           Follow Us On Instagram
         </h3>
 
-        <div className="border-pink-700 grid grid-cols-2 grid-rows-2 gap-4">
+        <div className=" grid grid-cols-2 grid-rows-2 md:grid-cols-1 lg:grid-cols-2  gap-4">
         <img className="rounded-xl" src={CheeseGyudon} alt="CheeseGyudon" />
         <img className="rounded-xl" src={fries} alt="fries" />
         <img className="rounded-xl" src={SweetPotatoFries} alt="SweetPotatoFries" />
@@ -223,7 +211,7 @@ const Footer = () => {
 
         </div>
         <div className=" w-full text-center text-white my-16">
-      <p className="font-dmsans text-[#ADB29E]">
+      <p className="font-dmsans text-[#ADB29E] tracking-wide">
         Copyright © 2025 Hashtag Developer. All Rights Reserved
       </p>
         </div>
