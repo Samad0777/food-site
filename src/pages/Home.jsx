@@ -18,7 +18,7 @@ import pizza from "../assets/images/Pizza.png"
 import cupcake from "../assets/images/cup-cake.png"
 import ParmesanTruffleFries from "../assets/images/Parmesan Truffle Fries.png"
 import friedchicken from "../assets/images/fried-chicken.png"
-import Footer from "../components/Footer";
+import { motion,AnimatePresence, easeIn, easeInOut } from "motion/react"
 
 const Home = () => {
   const CardData1 = [
@@ -151,36 +151,53 @@ const Home = () => {
     circle w-[100%] h-full rounded-full md:px-6"
           >
             <div className=" px-2 w-[100%] h-[60%]">
-              <h2
+              <motion.h2 
+              initial={{ opacity: 0, y: -100 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.9, ease: "easeOut" }}
                 className="text-secondary text-4xl
          md:text-6xl py-10 font-dmsans-reg tracking-wider text-center"
               >
                 Best food for your taste
-              </h2>
+              </motion.h2>
 
-              <p className="text-secondary font-dmsans text-center tracking-tighter  md:tracking-widest">
+              <motion.p 
+              initial={{ opacity: 0, y: 40 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 1, ease: "easeOut" }}
+              className="text-secondary font-dmsans text-center tracking-tighter  md:tracking-widest">
                 Discover delectable cuisine and unforgettable moments in our
                 welcoming, culinary haven.
-              </p>
+              </motion.p>
 
-              <div className="buttons my-8 space-x-4 flex justify-center items-center">
-                <button
+              <motion.div initial={{ y: 70, opacity: 0 }}
+                    animate={{ y: 0, opacity: 1 }}
+                    transition={{ duration: 0.7, ease: "easeIn" }}
+              className="buttons my-8 space-x-10 flex justify-center items-center">
+               
+
+                <button           
                   className="font-dmsans cursor-pointer border px-4
            py-3 rounded-3xl text-[#F9F9F7] bg-red-primary transition-all duration-300 ease-in-out
             hover:scale-95 hover:bg-[#991e28]"
                 >
                   Book A Table
                 </button>
+              
 
                 <Link to="/menu">
+               
+
                   <button
+                    
                     className="font-dmsans cursor-pointer border px-4 py-3 rounded-3xl
           transition-all duration-300 ease-in-out hover:bg-primary hover:text-white "
                   >
                     Explore Menu
                   </button>
+               
                 </Link>
-              </div>
+              </motion.div>
             </div>
           </div>
         </div>

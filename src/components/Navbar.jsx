@@ -90,7 +90,7 @@ const Navbar = () => {
     </button>
     </div>
 
-        <MobileNav open={open} />
+        <MobileNav open={open} setOpen={setOpen}/>
     </nav>
     
 

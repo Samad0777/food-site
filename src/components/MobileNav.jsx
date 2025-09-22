@@ -1,12 +1,15 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 import { motion,AnimatePresence } from "motion/react"
+import { div } from 'motion/react-client'
 
 const MobileNav = ({open}) => {
   return (
     <>
     <AnimatePresence mode='wait'>
     {open && (
+
+    
         <motion.div 
         initial={{opacity:0 , y: -100}}
         animate={{opacity:1 , y: -40}}
@@ -14,27 +17,27 @@ const MobileNav = ({open}) => {
         transition={{duration: 0.3}}
         className='absolute top-20 left-0  w-full h-screen z-20'
         >
-            <div 
+            <div onClick={() => setOpen(false) }
             className='text-xl font-semibold uppercase bg-primary text-white py-10 my-6 rounded-3xl'
             >
-                <ul className='flex flex-col justify-center items-center gap-10 font-dmsans'>
-                            <Link to="/">
+                <ul  className='flex flex-col justify-center items-center gap-10 font-dmsans'>
+                            <Link to="/" onClick={()=>setOpen(false)}>
                             <li className='cursor-pointer'>Home</li>
                             </Link>
                 
-                            <Link to="/about">
+                            <Link to="/about" onClick={()=>setOpen(false)}>
                             <li className='cursor-pointer'>About</li>
                             </Link>
                 
-                            <Link to="/menu">
+                            <Link to="/menu" onClick={()=>setOpen(false)}>
                             <li className='cursor-pointer'>Menu</li>
                             </Link>
                 
-                            <Link to="/pages">
+                            <Link to="/pages" onClick={()=>setOpen(false)}>
                             <li className='cursor-pointer'>Pages</li>
                             </Link>
                 
-                            <Link to="/contact">
+                            <Link to="/contact" onClick={()=>setOpen(false)}>
                             <li className='cursor-pointer'>Contact</li>
                             </Link>
                 

@@ -240,6 +240,15 @@ const About = () => {
 
             {/* sample video section ended */}
 
+
+    <section className='h-screen mt-24 border border-green-700'>
+
+    <div>
+
+    </div>
+
+    </section>
+
     </>
   )
 }
