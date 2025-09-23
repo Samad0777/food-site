@@ -6,8 +6,43 @@ import Timer from "../assets/images/timer 1.png";
 import checklist from "../assets/images/checklist.png";
 import menulist from "../assets/images/menulist.png";
 import Salad from "../assets/images/salad.png";
+import T1 from "../assets/images/T-1.png";
+import T2 from "../assets/images/T-2.png";
+import T3 from "../assets/images/T-3.png";
 
 const About = () => {
+  const testimonialData = [
+    {
+      id: 1,
+      img: T1,
+      desc: `Last night, we dined at place and were simply blown away. From the moment we stepped in,
+           we were enveloped in an inviting atmosphere and greeted with warm smiles.`,
+      title: "“The best restaurant”",
+      name: "Sophire Robson",
+      address: "Los Angeles, CA",
+    },
+
+    {
+      id: 2,
+      img: T2,
+      desc: `Place exceeded my expectations on all fronts. The ambiance was cozy and relaxed, making it a perfect venue for
+           our anniversary dinner. Each dish was prepared and beautifully presented.`,
+      title: "“Simply delicious”",
+      name: "Matt Cannon",
+      address: "San Diego, CA",
+    },
+
+    {
+      id: 3,
+      img: T3,
+      desc: `The culinary experience at place is first to none. The atmosphere is vibrant,
+           the food - nothing short of extraordinary. The food was the highlight of our evening. Highly recommended.`,
+      title: "“One of a kind restaurant”",
+      name: "Andy Smith",
+      address: "San Francisco, CA",
+    },
+  ];
+
   const WhatweOfferData = [
     {
       id: 1,
@@ -226,61 +261,50 @@ const About = () => {
 
       {/* sample video section ended */}
 
-
       {/* Info valuable for guest section started  */}
 
       <section className="h-auto flex justify-center items-center mt-24">
         <div className="flex flex-col lg:flex-row justify-center h-[90%] w-[90%]">
           <div className="left w-full h-full px-4 py-4">
             <div>
-
-            <h3 className="text-balance font-playfair text-3xl md:text-4xl text-secondary py-6">
-              A little information for our valuable guest
+              <h3 className="text-balance font-playfair text-3xl md:text-4xl text-secondary py-6">
+                A little information for our valuable guest
               </h3>
-            <p className="text-[#414536]">
-              At place, we believe that dining is not just about food, but also
-              about the overall experience. Our staff, renowned for their warmth
-              and dedication, strives to make every visit an unforgettable
-              event.
-            </p>
+              <p className="text-[#414536]">
+                At place, we believe that dining is not just about food, but
+                also about the overall experience. Our staff, renowned for their
+                warmth and dedication, strives to make every visit an
+                unforgettable event.
+              </p>
             </div>
 
             <div className=" mt-10 font-dmsans text-[#414536]  grid grid-cols-2 grid-rows-2">
-
-            <div className=" text-center  py-10">
-              <p className="text-secondary font-playfair text-3xl md:text-4xl py-2">
-                3
+              <div className=" text-center  py-10">
+                <p className="text-secondary font-playfair text-3xl md:text-4xl py-2">
+                  3
                 </p>
-              <p>Locations</p>
-            </div>
-            <div className=" text-center py-10">
-              <p className="text-secondary font-playfair text-3xl md:text-4xl py-2">
-                1995
-              </p>
-              <p>
-                Founded
-              </p>
-            </div>
+                <p>Locations</p>
+              </div>
+              <div className=" text-center py-10">
+                <p className="text-secondary font-playfair text-3xl md:text-4xl py-2">
+                  1995
+                </p>
+                <p>Founded</p>
+              </div>
 
-            <div className=" text-center py-10">
-              <p className="text-secondary font-playfair text-3xl md:text-4xl py-2">
-                65+
-              </p>
-              <p>
-                Staff Members
-              </p>
-            </div>
+              <div className=" text-center py-10">
+                <p className="text-secondary font-playfair text-3xl md:text-4xl py-2">
+                  65+
+                </p>
+                <p>Staff Members</p>
+              </div>
 
-            <div className=" text-center py-10">
-              
-              <p className="text-secondary font-playfair text-3xl md:text-4xl py-2">
-                100%
-              </p>
-              <p>
-                Satisfied Customers
-              </p>
-            </div>
-
+              <div className=" text-center py-10">
+                <p className="text-secondary font-playfair text-3xl md:text-4xl py-2">
+                  100%
+                </p>
+                <p>Satisfied Customers</p>
+              </div>
             </div>
           </div>
 
@@ -290,14 +314,68 @@ const About = () => {
                 className="rounded-xl w-[100%] h-[100%]"
                 src={Salad}
                 alt="salad"
-                />
+              />
             </div>
           </div>
         </div>
       </section>
 
-          {/* Info valuable for guest section ended  */}
-          
+      {/* Info valuable for guest section ended  */}
+
+      {/* testimonial section started here  */}
+
+      <section className="h-auto flex justify-center mt-40 items-center">
+        <div className="container h-[90%] w-[95%]">
+          <div>
+            <h3 className="font-playfair text-2xl text-center py-4 md:text-4xl">
+              What Our Customers Say
+            </h3>
+          </div>
+
+          <div className="mt-6 grid grid-cols-1 grid-rows-3 gap-8 
+          md:grid-cols-2 md:grid-rows-2 lg:grid-cols-3 lg:grid-rows-1">
+            
+            {testimonialData.map((items, index) => {
+              return (
+                <div
+                  key={items.id}
+                  className="m-4 cursor-pointer hover:scale-95 transition-all ease-in-out duration-300"
+                >
+                  <div
+                    className="shadow-2xl flex flex-col items-center justify-center
+                              px-2 py-12 text-center w-[100%] h-[100%]  rounded-2xl"
+                  >
+                    <div className="px-2 py-2 text-left w-full">
+                      <h3 className="font-dmsans text-red-primary text-2xl">
+                        {items.title}
+                      </h3>
+                    </div>
+
+                    <div className="px-2 py-4">
+                      <p className="text-[#414536] font-dmsans tracking-wide py-4 text-left">
+                        {items.desc}
+                      </p>
+                    </div>
+
+                    <div className="flex items-center ">
+                      <img src={items.img} alt="customerImg" />
+                      <div className="flex flex-col px-4">
+                        <h4 className="text-xl font-dmsans">{items.name}</h4>
+
+                        <p className="font-dmsans text-[#414536]">
+                          {items.address}
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              );
+            })}
+          </div>
+        </div>
+      </section>
+
+      {/* testimonial section ended here  */}
     </>
   );
 };

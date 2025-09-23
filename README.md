@@ -18,7 +18,7 @@ Focus on writing clean, reusable components
 📌 Current Progress
 
 ✅ Home page Completed
-🚧 About page is ongoing
+✅ About page Completed
 🚧 Responsive layout (applied on completed sections, rest ongoing)
 🚧 About, Menu Page, Contact Page (next on the list)
 
