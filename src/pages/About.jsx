@@ -1,40 +1,41 @@
-import React from 'react'
-import eggrice from "../assets/images/eggrice.png"
-import vidoeres from "../assets/video/restaurant-env.mp4"
-import { Link } from 'react-router-dom'
-import Timer from "../assets/images/timer 1.png"
-import checklist from "../assets/images/checklist.png"
-import menulist from "../assets/images/menulist.png"
+import React from "react";
+import eggrice from "../assets/images/eggrice.png";
+import vidoeres from "../assets/video/restaurant-env.mp4";
+import { Link } from "react-router-dom";
+import Timer from "../assets/images/timer 1.png";
+import checklist from "../assets/images/checklist.png";
+import menulist from "../assets/images/menulist.png";
+import Salad from "../assets/images/salad.png";
 
 const About = () => {
   const WhatweOfferData = [
     {
-      id:1,
-      img:Timer,
-      title:"Multi Cuisine",
-      desc:"In the new era of technology we look in the future with certainty life."
+      id: 1,
+      img: Timer,
+      title: "Multi Cuisine",
+      desc: "In the new era of technology we look in the future with certainty life.",
     },
 
     {
-      id:2,
-      img:checklist,
-      title:"Easy To Order",
-      desc:"In the new era of technology we look in the future with certainty life."
+      id: 2,
+      img: checklist,
+      title: "Easy To Order",
+      desc: "In the new era of technology we look in the future with certainty life.",
     },
 
     {
-      id:3,
-      img:menulist,
-      title:"Fast Delivery",
-      desc:"In the new era of technology we look in the future with certainty life."
+      id: 3,
+      img: menulist,
+      title: "Fast Delivery",
+      desc: "In the new era of technology we look in the future with certainty life.",
     },
   ];
 
   return (
     <>
-    {/* Visit us section start here  */}
+      {/* Visit us section start here  */}
 
-    <section className="min-h-screen py-12 flex items-center justify-center">
+      <section className="min-h-screen py-12 flex items-center justify-center">
         <div className=" grid grid-rows-2 grid-cols-1 lg:grid-cols-2 lg:grid-rows-1 w-[90%] md:w-[80%]">
           {/* left side  */}
           <div className="relative left h-[100%] w-[100%]">
@@ -167,90 +168,138 @@ const About = () => {
 
       {/* Visit us section Ended here  */}
 
-
-
-
-
       {/* sample video section started  */}
 
-    <section className='h-[50vh] mt-32 sm:mt-4'>
+      <section className="h-[50vh] mt-32 sm:mt-4">
+        <div className="relative w-full  h-[100%]">
+          <div className="vide bg-black/20 opacity-90">
+            <video
+              autoPlay
+              loop
+              muted
+              className="absolute object-cover w-full h-[100%]"
+              src={vidoeres}
+            ></video>
+          </div>
 
-      <div className='relative w-full  h-[100%]'>
-
-      <div className='vide bg-black/20 opacity-90'>
-    <video autoPlay loop muted
-    className='absolute object-cover w-full h-[100%]'
-    src={vidoeres}>
-
-    </video>
-      </div>
-
-    <div  className='absolute flex w-full opacity-95 justify-center drop-shadow-lg
-     items-center text-[#ffffff] text-2xl md:text-4xl top-[50%] font-playfair'>
-    <p className='text-center '>
-      Feel the authentic & original taste from us
-    </p>
-    </div>
-
-      </div>
-    
-    </section>
-
-
-      <section className='h-auto'>
-
-
-   
-      <div className='h-auto px-4 py-4 grid grid-cols-1 grid-rows-3
-       md:grid-cols-2 md:grid-rows-2 lg:grid-cols-3 lg:grid-rows-1'>
-    
-      {WhatweOfferData.map((items,index)=>{
-        return (
-          <div key={items.id} className="m-4 cursor-pointer hover:scale-95 
-                transition-all ease-in-out duration-300">
-                  <div
-                    className="shadow-2xl flex flex-col items-center justify-center
-                    px-4 py-12 text-center w-[100%] h-auto  rounded-2xl"
-                  >
-                    <div className="flex items-center ">
-                     <img
-                      src={items.img}
-                      
-                      alt="customerImg"
-                      /> 
-                    <div className="flex flex-col px-4 space-y-4">
-
-                      <h4 className="text-xl font-dmsans">
-                        {items.title}
-                      </h4>
-
-                      <p className="font-dmsans text-[#414536]">
-                        {items.desc}
-                      </p>
-                    </div>
-
-                    </div>
-
-                  </div>
-                </div>
-              );
-            })}
-      </div>
+          <div
+            className="absolute flex w-full opacity-95 justify-center drop-shadow-lg
+     items-center text-[#ffffff] text-2xl md:text-4xl top-[50%] font-playfair"
+          >
+            <p className="text-center ">
+              Feel the authentic & original taste from us
+            </p>
+          </div>
+        </div>
       </section>
 
-            {/* sample video section ended */}
+      <section className="h-auto">
+        <div
+          className="h-auto px-4 py-4 grid grid-cols-1 grid-rows-3
+       md:grid-cols-2 md:grid-rows-2 lg:grid-cols-3 lg:grid-rows-1"
+        >
+          {WhatweOfferData.map((items, index) => {
+            return (
+              <div
+                key={items.id}
+                className="m-4 cursor-pointer hover:scale-95 
+                transition-all ease-in-out duration-300"
+              >
+                <div
+                  className="shadow-2xl flex flex-col items-center justify-center
+                    px-4 py-12 text-center w-[100%] h-auto  rounded-2xl"
+                >
+                  <div className="flex items-center ">
+                    <img src={items.img} alt="customerImg" />
+                    <div className="flex flex-col px-4 space-y-4">
+                      <h4 className="text-xl font-dmsans">{items.title}</h4>
+
+                      <p className="font-dmsans text-[#414536]">{items.desc}</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            );
+          })}
+        </div>
+      </section>
+
+      {/* sample video section ended */}
 
 
-    <section className='h-screen mt-24 border border-green-700'>
+      {/* Info valuable for guest section started  */}
 
-    <div>
+      <section className="h-auto flex justify-center items-center mt-24">
+        <div className="flex flex-col lg:flex-row justify-center h-[90%] w-[90%]">
+          <div className="left w-full h-full px-4 py-4">
+            <div>
 
-    </div>
+            <h3 className="text-balance font-playfair text-3xl md:text-4xl text-secondary py-6">
+              A little information for our valuable guest
+              </h3>
+            <p className="text-[#414536]">
+              At place, we believe that dining is not just about food, but also
+              about the overall experience. Our staff, renowned for their warmth
+              and dedication, strives to make every visit an unforgettable
+              event.
+            </p>
+            </div>
 
-    </section>
+            <div className=" mt-10 font-dmsans text-[#414536]  grid grid-cols-2 grid-rows-2">
 
+            <div className=" text-center  py-10">
+              <p className="text-secondary font-playfair text-3xl md:text-4xl py-2">
+                3
+                </p>
+              <p>Locations</p>
+            </div>
+            <div className=" text-center py-10">
+              <p className="text-secondary font-playfair text-3xl md:text-4xl py-2">
+                1995
+              </p>
+              <p>
+                Founded
+              </p>
+            </div>
+
+            <div className=" text-center py-10">
+              <p className="text-secondary font-playfair text-3xl md:text-4xl py-2">
+                65+
+              </p>
+              <p>
+                Staff Members
+              </p>
+            </div>
+
+            <div className=" text-center py-10">
+              
+              <p className="text-secondary font-playfair text-3xl md:text-4xl py-2">
+                100%
+              </p>
+              <p>
+                Satisfied Customers
+              </p>
+            </div>
+
+            </div>
+          </div>
+
+          <div className="right flex items-center justify-center w-full h-auto">
+            <div className="md:w-[60%] lg:w-[70%] h-[85%]">
+              <img
+                className="rounded-xl w-[100%] h-[100%]"
+                src={Salad}
+                alt="salad"
+                />
+            </div>
+          </div>
+        </div>
+      </section>
+
+          {/* Info valuable for guest section ended  */}
+          
     </>
-  )
-}
+  );
+};
 
-export default About
+export default About;
