@@ -40,7 +40,7 @@ const Navbar = () => {
 
             <NavLink className={({isActive})=> `${isActive ? "bg-[#DBDFD0] rounded-2xl" : "bg-white" }`} to="/pages">
             <li className='cursor-pointer hover:bg-[#DBDFD0] rounded-2xl px-4 py-1'>
-              Pages
+              Blogs
               </li>
             </NavLink>
 
