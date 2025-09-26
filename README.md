@@ -11,8 +11,6 @@ Smooth navigation using React Router DOM
 
 Animated sections powered by Framer Motion
 
-Hands-on practice with React Hook Form
-
 Focus on writing clean, reusable components
 
 📌 Current Progress
