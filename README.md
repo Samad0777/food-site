@@ -19,7 +19,7 @@ Focus on writing clean, reusable components
 ✅ About page Completed
 🚧 Menu page is ongoing
 🚧 Responsive layout (applied on completed sections, rest ongoing)
-🚧 Menu Page, Contact Page (next on the list)
+🚧 Contact Page , Blog page (next on the list)
 
 🎯 Why this project?
 

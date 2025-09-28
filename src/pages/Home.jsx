@@ -362,7 +362,8 @@ const CardData = [
           >
             {CardData.map((items, index) => {
 
-            return (  <Cards key={items.id} tittle={items.tittle} img ={items.img}
+            return ( 
+            <Cards key={items.id} tittle={items.tittle} img ={items.img}
               desc={items.desc} Explore={true} imgs={true} images={false}
             />
          );

@@ -5,18 +5,18 @@ const Cards = (props) => {
  
   return (
     <>
-          <div className="mt-6 mb-6 cursor-pointer hover:scale-95 transition-all ease-in-out duration-300"
+          <div className="mt-6 mb-6 px-2 py-4 cursor-pointer transition-all ease-in-out duration-200 hover:scale-95"
           >
 
           <div
             
-            className="shadow-2xl flex flex-col justify-around items-center 
+            className="shadow-2xl flex flex-col justify-evenly items-center 
             px-2 py-2 text-center h-[65vh] rounded-2xl"
           >
             {props.imgs && <div className="flex justify-center items-center">{props.img}</div>}
 
            {props.images && <div>
-              <img src={props.image} alt="image" />
+              <img className="rounded-xl" src={props.image} alt="image" />
             </div>}
 
             {props.prices && <div>
