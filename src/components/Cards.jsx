@@ -11,7 +11,7 @@ const Cards = (props) => {
           <div
             
             className="shadow-2xl flex flex-col justify-evenly items-center 
-            px-2 pb-2 text-center h-full md:h-[80vh] rounded-2xl"
+            px-4 py-8 md:px-2 md:pb-2 text-center h-full md:h-[80vh] rounded-2xl"
           >
             {props.imgs && <div className="flex justify-center items-center">{props.img}</div>}
 

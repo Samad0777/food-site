@@ -60,7 +60,7 @@ const Menu = () => {
                         ? "bg-red-primary text-white"
                         : "bg-[#DBDFD0] text-black"
                     } 
-             md:px-8 text-center active:scale-95 py-2 transition-all ease-in-out duration-300 rounded-3xl hover:bg-red-primary hover:text-white`
+             sm:px-8 sm:py-3 md:px-8 text-center active:scale-95 py-2 transition-all ease-in-out duration-300 rounded-3xl hover:bg-red-primary hover:text-white`
                   }
                   onClick={() => {
                     setActiveCategory("All");
@@ -76,7 +76,7 @@ const Menu = () => {
                         ? "bg-red-primary text-white"
                         : "bg-[#DBDFD0] text-black"
                     } 
-             md:px-8 text-center active:scale-95 py-2 transition-all ease-in-out duration-300 rounded-3xl hover:bg-red-primary hover:text-white`
+             sm:px-8 sm:py-3 md:px-8 text-center active:scale-95 py-2 transition-all ease-in-out duration-300 rounded-3xl hover:bg-red-primary hover:text-white`
                   }
                   to="/menu/breakfast"
                   onClick={() => {
@@ -92,7 +92,7 @@ const Menu = () => {
                         ? "bg-red-primary text-white"
                         : "bg-[#DBDFD0] text-black"
                     } 
-             md:px-8 text-center active:scale-95 py-2 transition-all ease-in-out duration-300 rounded-3xl hover:bg-red-primary hover:text-white`
+            sm:px-8 sm:py-3 md:px-8 text-center active:scale-95 py-2 transition-all ease-in-out duration-300 rounded-3xl hover:bg-red-primary hover:text-white`
                   }
                   to="/menu/maindishes"
                   onClick={() => {
@@ -108,7 +108,7 @@ const Menu = () => {
                         ? "bg-red-primary text-white"
                         : "bg-[#DBDFD0] text-black"
                     } 
-             md:px-8 text-center active:scale-95 py-2 transition-all ease-in-out duration-300 rounded-3xl hover:bg-red-primary hover:text-white`
+            sm:px-8 sm:py-3 md:px-8 text-center active:scale-95 py-2 transition-all ease-in-out duration-300 rounded-3xl hover:bg-red-primary hover:text-white`
                   }
                   to="/menu/drinks"
                   onClick={() => {
@@ -124,7 +124,7 @@ const Menu = () => {
                         ? "bg-red-primary text-white"
                         : "bg-[#DBDFD0] text-black"
                     } 
-             md:px-8 text-center active:scale-95 py-2 transition-all ease-in-out duration-300 rounded-3xl hover:bg-red-primary hover:text-white`
+            sm:px-8 sm:py-3 md:px-8 text-center active:scale-95 py-2 transition-all ease-in-out duration-300 rounded-3xl hover:bg-red-primary hover:text-white`
                   }
                   to="/menu/desserts"
                   onClick={() => {
@@ -150,8 +150,8 @@ const Menu = () => {
         >
           {filteredData.map((items, index) => {
             return (
-              <div key={items.id || index} className="active:scale-95">
-                <Cards
+              <div  key={items.id || index} className="active:scale-95">
+                <Cards 
                   tittle={items.name}
                   prices={true}
                   img={false}
@@ -172,7 +172,7 @@ const Menu = () => {
 
       <section className="h-screen grid place-items-center">
         <div className="flex flex-col md:flex-row h-[90%] w-[90%]">
-          <div className="flex flex-col text-center space-y-4 justify-center items-center h-[100%] md:w-[40%] px-6">
+          <div className="flex flex-col text-center space-y-4 justify-center items-center h-[100%] md:w-[40%] lg:px-12">
             <h3 className="text-3xl md:text-4xl font-playfair text-secondary">You can order through apps</h3>
             <p className="font-dmsans text-[#414536]">
               Lorem ipsum dolor sit amet consectetur adipiscing elit enim
