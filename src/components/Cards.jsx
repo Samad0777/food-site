@@ -11,7 +11,7 @@ const Cards = (props) => {
           <div
             
             className="shadow-2xl flex flex-col justify-evenly items-center 
-            px-2 py-2 text-center h-[65vh] rounded-2xl"
+            px-2 pb-2 text-center h-full md:h-[80vh] rounded-2xl"
           >
             {props.imgs && <div className="flex justify-center items-center">{props.img}</div>}
 
@@ -26,11 +26,11 @@ const Cards = (props) => {
               </div>}
 
             <div className="">
-              <h3 className="font-dmsans text-secondary text-2xl">
+              <h3 className="font-dmsans text-secondary text-xl md:text-2xl">
                 {props.tittle}
               </h3>
 
-              <p className="text-[#414536] font-dmsans py-2">{props.desc}</p>
+              <p className="text-[#414536] font-dmsans text-sm py-2">{props.desc}</p>
             </div>
 
           {props.Explore && <Link to='/menu'>
