@@ -49,7 +49,7 @@ if (activeCategory === "All") {
               <ul className="grid grid-cols-3 grid-rows-2 space-y-1 space-x-0.5 sm:flex justify-around items-center text-secondary font-dmsans">
                
                 <NavLink
-                to='#'
+                to='/menu/all'
                 className={({ isActive }) =>
             `${isActive ? "bg-red-primary text-white" : "bg-[#DBDFD0] text-black"} 
              md:px-8 text-center active:scale-95 py-2 transition-all ease-in-out duration-300 rounded-3xl hover:bg-red-primary hover:text-white`
@@ -67,7 +67,7 @@ if (activeCategory === "All") {
             className={({ isActive }) =>
             `${isActive ? "bg-red-primary text-white" : "bg-[#DBDFD0] text-black" } 
              md:px-8 text-center active:scale-95 py-2 transition-all ease-in-out duration-300 rounded-3xl hover:bg-red-primary hover:text-white`}
-                      to='#'
+                      to='/menu/breakfast'
                     onClick={() => {
                       setActiveCategory("Breakfast");
                     }}
@@ -81,7 +81,7 @@ if (activeCategory === "All") {
             className={({ isActive }) =>
             `${isActive ? "bg-red-primary text-white" : "bg-[#DBDFD0] text-black" } 
              md:px-8 text-center active:scale-95 py-2 transition-all ease-in-out duration-300 rounded-3xl hover:bg-red-primary hover:text-white`}
-                      to='#'
+                      to='/menu/maindishes'
                     onClick={() => {
                       setActiveCategory("Lunch");
                     }}
@@ -95,7 +95,7 @@ if (activeCategory === "All") {
             className={({ isActive }) =>
             `${isActive ? "bg-red-primary text-white" : "bg-[#DBDFD0] text-black" } 
              md:px-8 text-center active:scale-95 py-2 transition-all ease-in-out duration-300 rounded-3xl hover:bg-red-primary hover:text-white`}
-                  to='#'
+                  to='/menu/drinks'
                     onClick={() => {
                       setActiveCategory("Beverage");
                     }}
@@ -109,7 +109,7 @@ if (activeCategory === "All") {
             className={({ isActive }) =>
             `${isActive ? "bg-red-primary text-white" : "bg-[#DBDFD0] text-black" } 
              md:px-8 text-center active:scale-95 py-2 transition-all ease-in-out duration-300 rounded-3xl hover:bg-red-primary hover:text-white`}
-                  to='#'
+                  to='/menu/desserts'
                     onClick={() => {
                       setActiveCategory("Dessert");
                     }}
