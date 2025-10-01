@@ -7,6 +7,7 @@ import Menu from './pages/Menu'
 import Pages from './pages/Pages'
 import Contact from './pages/Contact'
 import Footer from './components/Footer'
+import BookTable from './pages/BookTable'
 
 
 const App = () => {
@@ -19,6 +20,7 @@ const App = () => {
     <Route path='/menu' element={<Menu/>} />
     <Route path='/pages' element={<Pages/>} />
     <Route path='/contact' element={<Contact/>} />
+    <Route path='/booktable' element={<BookTable/>} />
     <Route path='/menu/all' element={<Menu/>} />
     <Route path='/menu/breakfast' element={<Menu/>} />
     <Route path='/menu/maindishes' element={<Menu/>} />

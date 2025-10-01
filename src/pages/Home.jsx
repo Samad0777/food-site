@@ -19,6 +19,7 @@ import cupcake from "../assets/images/cup-cake.png"
 import ParmesanTruffleFries from "../assets/images/Parmesan Truffle Fries.png"
 import friedchicken from "../assets/images/fried-chicken.png"
 import { motion,AnimatePresence, easeIn, easeInOut } from "motion/react"
+import { NavLink } from "react-router-dom";
 
 const Home = () => {
 
@@ -318,7 +319,7 @@ const CardData = [
                     transition={{ duration: 0.7, ease: "easeIn" }}
               className="buttons my-8 space-x-10 flex justify-center items-center">
                
-
+              <NavLink to='/booktable'>
                 <button           
                   className="font-dmsans cursor-pointer border px-4
            py-3 rounded-3xl text-[#F9F9F7] bg-red-primary transition-all duration-300 ease-in-out
@@ -326,6 +327,7 @@ const CardData = [
                 >
                   Book A Table
                 </button>
+              </NavLink>
               
 
                 <Link to="/menu">

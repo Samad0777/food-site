@@ -52,10 +52,12 @@ const Navbar = () => {
 
         </ul>
 
+       <NavLink to='/booktable'>
         <button className='active:scale-95 text-sm font-bold border rounded-3xl xl:px-4  px-2 py-2 cursor-pointer
         transition-all duration-300 ease-in-out hover:bg-primary hover:text-white'>
             Book A Table
             </button>
+       </NavLink>
 
     </nav>
 

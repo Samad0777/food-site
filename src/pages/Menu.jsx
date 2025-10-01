@@ -19,7 +19,6 @@ const Menu = () => {
   const apiData = async () => {
     const response = await axios.get("https://dummyjson.com/recipes?limit=50");
     setData(response.data.recipes);
-    console.log(response.data.recipes);
   };
 
   let filteredData = [];

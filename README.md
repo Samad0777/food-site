@@ -17,7 +17,8 @@ Focus on writing clean, reusable components
 
 ✅ Home page Completed
 ✅ About page Completed
-✅ Menu page is ongoing
+✅ Menu page is Completed
+🚧 Book Table page is ongoing
 🚧 Responsive layout (applied on completed sections, rest ongoing)
 🚧 Contact Page , Blog page (next on the list)
 
