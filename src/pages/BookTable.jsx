@@ -19,7 +19,7 @@ const BookTable = () => {
 
         {/* booking section started  */}
         <div className="flex justify-center items-center">
-          <form className="flex flex-col space-x-4 space-y-4  md:px-8 md:py-10">
+          <form className="absolute top-[25%] lg:top-[19%]  w-[100vw] lg:w-fit rounded-2xl bg-[#F9F9F7] flex flex-col space-x-4 space-y-4  px-8 py-10">
             <div className="flex flex-col md:flex-row justify-between md:items-center space-x-8 space-y-4">
               <label htmlFor="DatePicker">Date</label>
               <DatePicker/>
