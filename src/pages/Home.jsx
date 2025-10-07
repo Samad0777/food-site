@@ -744,11 +744,13 @@ const CardData = [
                 </h3>
 
                 <div className="text-center my-8">
+                  <NavLink to='/pages'>
                 <button className="cursor-pointer font-dmsans text-white bg-red-primary 
                           transition-all duration-300 ease-in-out hover:text-gray-200 active:scale-95 hover:scale-95
                            hover:bg-[#991e28] rounded-4xl py-4 px-4">
                   Read All Articles
                 </button>
+                  </NavLink>
                 </div>
 
               </div>
