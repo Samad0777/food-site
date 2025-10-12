@@ -102,7 +102,7 @@ const Pages = () => {
   ];
   return (
     <>
-      <section className="h-auto border border-green-700">
+      <section className="h-auto">
         <div className="h-auto text-center py-4 px-6">
           <h1 className="text-3xl font-playfair text-secondary md:text-7xl">
             Our Blog & Articles
@@ -113,11 +113,11 @@ const Pages = () => {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 border border-red-700 ">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4">
           {DataList.map((items, index) => (
             <div
               key={items.id}
-              className="m-4 h-[55vh] w-fit  rounded-xl cursor-pointer hover:scale-95 transition-all ease-in-out duration-300 "
+              className="m-4 h-full w-fit  rounded-xl cursor-pointer hover:scale-95 transition-all ease-in-out duration-300 "
             >
               <Link>
               <div
