@@ -79,7 +79,6 @@ const Navbar = () => {
       <div>
         <button onClick={()=>{
           setOpen(!open);
-          console.log(open);
           
         }}>
           <div>
