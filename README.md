@@ -21,7 +21,7 @@ Focus on writing clean, reusable components
 ✅ Book Table page is Adedd
 🚧 Blog page is ongoing
 🚧 Responsive layout (applied on completed sections, rest ongoing)
-🚧 Contact Page (next on the list)
+🚧 Contact Page is ongoing
 
 🎯 Why this project?
 
