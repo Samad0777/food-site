@@ -24,14 +24,36 @@ const router = createBrowserRouter([
       },
       {
         path:"/menu",
-        element:<Menu/>
+        element:<Menu/>,
+        children:[
+          {
+            path:"/menu/all",
+            element:<Menu/>
+          },
+          {
+            path:"/menu/breakfast",
+            element:<Menu/>
+          },
+          {
+            path:"/menu/maindishes",
+            element:<Menu/>
+          },
+          {
+            path:"/menu/drinks",
+            element:<Menu/>
+          },
+          {
+            path:"/menu/desserts",
+            element:<Menu/>
+          },
+        ]
       },
       {
         path:"/contact",
         element:<Contact/>
       },
       {
-        path:"/pages",
+        path:"/blogs",
         element:<Pages/>
       },
       {

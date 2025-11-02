@@ -335,7 +335,7 @@ const CardData = [
 
                   <button
                     
-                    className="font-dmsans cursor-pointer border px-4 py-3 rounded-3xl
+                    className="font-dmsans cursor-pointer hover:scale-95 border px-3 md:px-4 py-3 rounded-3xl
           transition-all duration-300 ease-in-out hover:bg-primary hover:text-white "
                   >
                     Explore Menu
@@ -744,7 +744,7 @@ const CardData = [
                 </h3>
 
                 <div className="text-center my-8">
-                  <NavLink to='/pages'>
+                  <NavLink to='/blogs'>
                 <button className="cursor-pointer font-dmsans text-white bg-red-primary 
                           transition-all duration-300 ease-in-out hover:text-gray-200 active:scale-95 hover:scale-95
                            hover:bg-[#991e28] rounded-4xl py-4 px-4">
@@ -760,7 +760,7 @@ const CardData = [
                 <div className="">
                   {blogData1.map((items , index)=>{
                   return (
-              <Link key={items.id} to='/pages'>
+              <Link key={items.id} to='/blogs'>
               
                 <div  className="m-4 cursor-pointer hover:scale-95 transition-all ease-in-out duration-300">
                   <div

@@ -11,12 +11,12 @@ const Navbar = () => {
     <>
     <nav className='hidden md:flex items-center justify-around text-primary'>
 
-        <div className="logo flex items-center">
+        <NavLink to="/" className="logo flex items-center cursor-pointer">
             <img src={logo} alt="logo" /> 
             <h2 className='font-semibold text-4xl px-2'>
                 Bistro Bliss
             </h2>
-        </div>
+        </NavLink>
 
         <ul className='flex lg:space-x-6 font-dmsans'>
 
@@ -38,7 +38,7 @@ const Navbar = () => {
               </li>
             </NavLink>
 
-            <NavLink className={({isActive})=> `${isActive ? "bg-[#DBDFD0] rounded-2xl" : "bg-white" }`} to="/pages">
+            <NavLink className={({isActive})=> `${isActive ? "bg-[#DBDFD0] rounded-2xl" : "bg-white" }`} to="/blogs">
             <li className='cursor-pointer hover:bg-[#DBDFD0] rounded-2xl px-4 py-1'>
               Blogs
               </li>

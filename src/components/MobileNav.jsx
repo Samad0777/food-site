@@ -33,7 +33,7 @@ const MobileNav = ({open}) => {
                             <li className='cursor-pointer'>Menu</li>
                             </Link>
                 
-                            <Link to="/pages" onClick={()=>setOpen(false)}>
+                            <Link to="/blogs" onClick={()=>setOpen(false)}>
                             <li className='cursor-pointer'>Blogs</li>
                             </Link>
                 
