@@ -8,11 +8,14 @@ import Contact from './pages/Contact'
 import Footer from './components/Footer'
 import BookTable from './pages/BookTable'
 import Erorr404 from './pages/Erorr404';
+import ErorrPage from './pages/ErorrPage';
+import BlogDescrip from './pages/BlogDescrip';
 
 const router = createBrowserRouter([
   { 
     path: "/",
     element: <div><Navbar/> <Outlet/><Footer/></div>,
+    errorElement:<ErorrPage/>,
     children:[
       {
         path:"/",
@@ -55,6 +58,10 @@ const router = createBrowserRouter([
       {
         path:"/blogs",
         element:<Pages/>
+      },
+      {
+        path:"/blogs:id",
+        element:<BlogDescrip/>
       },
       {
         path:"/booktable",
