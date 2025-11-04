@@ -7,15 +7,15 @@ import Pages from './pages/Pages'
 import Contact from './pages/Contact'
 import Footer from './components/Footer'
 import BookTable from './pages/BookTable'
-import Erorr404 from './pages/Erorr404';
-import ErorrPage from './pages/ErorrPage';
+import NotFoundPage from './pages/NotFoundPage';
 import BlogDescrip from './pages/BlogDescrip';
+import ErrorPage from './pages/ErorrPage';
 
 const router = createBrowserRouter([
   { 
     path: "/",
     element: <div><Navbar/> <Outlet/><Footer/></div>,
-    errorElement:<ErorrPage/>,
+    errorElement:<ErrorPage/>,
     children:[
       {
         path:"/",
@@ -60,7 +60,7 @@ const router = createBrowserRouter([
         element:<Pages/>
       },
       {
-        path:"/blogs:id",
+        path:"/blogs/:productID",
         element:<BlogDescrip/>
       },
       {
@@ -69,7 +69,7 @@ const router = createBrowserRouter([
       },
       {
         path:"*",
-        element:<Erorr404/>
+        element:<NotFoundPage/>
       },
     ]
    },

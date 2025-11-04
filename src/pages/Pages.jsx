@@ -12,7 +12,7 @@ import Gadgets from "../assets/images/cooking-gadgets.png";
 import Noodles from "../assets/images/noodles.png";
 import Desserts from "../assets/images/desserts.png";
 import Sushi from "../assets/images/sushi.png";
-import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 
 const Pages = () => {
   const DataList = [
@@ -119,7 +119,7 @@ const Pages = () => {
               key={items.id}
               className="m-4 h-full w-fit  rounded-xl cursor-pointer hover:scale-95 transition-all ease-in-out duration-300 "
             >
-              <Link>
+              <NavLink to={`/blogs/${items.id}`}>
               <div
                 className="shadow-2xl flex flex-col items-center justify-center active:scale-95
                               px-2 text-center w-[100%] h-[100%]  rounded-2xl"
@@ -137,7 +137,7 @@ const Pages = () => {
                   </h3>
                 </div>
               </div>
-              </Link>
+              </NavLink>
             </div>
           ))}
         </div>

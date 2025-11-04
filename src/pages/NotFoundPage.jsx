@@ -1,6 +1,6 @@
 import React from 'react'
 
-const Erorr404 = () => {
+const NotFoundPage = () => {
   return (
     <div className='m-20 text-center space-y-4'>
       <h1 className='text-7xl font-dmsans text-red-primary'>
@@ -13,4 +13,4 @@ const Erorr404 = () => {
   )
 }
 
-export default Erorr404
+export default NotFoundPage
