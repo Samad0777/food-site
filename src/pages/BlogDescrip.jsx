@@ -1,6 +1,115 @@
 import React from "react";
+import { useLoaderData, useParams } from "react-router-dom";
+import Roll from "../assets/images/roll.png";
+import Baking from "../assets/images/baking.png";
+import CheeseCake from "../assets/images/cheesecake.png";
+import Fri from "../assets/images/fri.png";
+import ChickenTender from "../assets/images/chicken-tender.png";
+import Choco from "../assets/images/choco.png";
+import PerfectBurger from "../assets/images/perfect.png";
+import Pizza from "../assets/images/pizza-bite.png";
+import Gadgets from "../assets/images/cooking-gadgets.png";
+import Noodles from "../assets/images/noodles.png";
+import Desserts from "../assets/images/desserts.png";
+import Sushi from "../assets/images/sushi.png";
 
 const BlogDescrip = () => {
+
+  const DataList = [
+      {
+        id: 1,
+        img: Sushi,
+        year: "January 3, 2023",
+        desc: "How to prepare a delicious gluten free sushi",
+      },
+  
+      {
+        id: 2,
+        img: Baking,
+        year: "January 3, 2023",
+        desc: "Exclusive baking lessons from the pastry king",
+      },
+  
+      {
+        id: 3,
+        img: Fri,
+        year: "January 3, 2023",
+        desc: "How to prepare the perfect fries in an air fryer",
+      },
+  
+      {
+        id: 4,
+        img: ChickenTender,
+        year: "January 3, 2023",
+        desc: "How to prepare delicious chicken tenders",
+      },
+  
+      {
+        id: 5,
+        img: Choco,
+        year: "January 3, 2023",
+        desc: "5 great cooking gadgets you can buy to save time",
+      },
+  
+      {
+        id: 6,
+        img: PerfectBurger,
+        year: "January 3, 2023",
+        desc: "The secret tips & tricks to prepare a perfect burger",
+      },
+  
+      {
+        id: 7,
+        img: CheeseCake,
+        year: "January 3, 2023",
+        desc: "7 delicious cheesecake recipes you can prepare",
+      },
+  
+      {
+        id: 8,
+        img: Pizza,
+        year: "January 3, 2023",
+        desc: "5 great pizza restaurants you should visit this city",
+      },
+  
+      {
+        id: 9,
+        img: Gadgets,
+        year: "January 3, 2023",
+        desc: "5 great cooking gadgets you can buy to save time",
+      },
+  
+      {
+        id: 10,
+        img: Roll,
+        year: "January 3, 2023",
+        desc: "How to prepare a delicious gluten free sushi",
+      },
+  
+      {
+        id: 11,
+        img: Noodles,
+        year: "January 3, 2023",
+        desc: "Top 20 simple and quick desserts for kids",
+      },
+  
+      {
+        id: 12,
+        img: Desserts,
+        year: "January 3, 2023",
+        desc: "Top 20 simple and quick desserts for kids",
+      },
+    ];
+
+const { productID } = useParams();
+
+  
+  const blog = DataList.find(item => item.id === Number(productID));
+
+  console.log(blog);
+  
+  
+
   return (
     <>
       <section className="h-auto flex flex-col justify-items-center items-center">
@@ -11,8 +120,8 @@ const BlogDescrip = () => {
           </h1>
         </div>
 
-        <div className="p-10">
-          <img src="#" alt="img" />
+        <div className="p-10 w-[90vw] h-[100vw] md:h-[100vh]">
+          <img src={blog.img} alt="img" className="w-[100%] h-[100%]"/>
         </div>
 
         <div className="m-10">
@@ -109,8 +218,8 @@ const BlogDescrip = () => {
           </div>
         </div>
 
-        <div className="p-10">
-          <img src="#" alt="img" />
+        <div className="p-10 w-[90vw] h-[100vw] md:h-[100vh]">
+          <img src={blog.img} alt="img"  className="w-[100%] h-[100%]"/>
         </div>
 
         <div className="m-10">

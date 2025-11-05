@@ -15,7 +15,7 @@ import Sushi from "../assets/images/sushi.png";
 import { NavLink } from "react-router-dom";
 
 const Pages = () => {
-  const DataList = [
+ const DataList = [
     {
       id: 1,
       img: Sushi,

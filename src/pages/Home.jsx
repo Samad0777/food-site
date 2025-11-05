@@ -2,7 +2,7 @@ import React from "react";
 import Hero from "../assets/images/hero-section.jpg";
 import Cards from "../components/Cards";
 import Shawarma from "../assets/images/healthy.jpg";
-import { Link } from "react-router-dom";
+import { Link, useRouteError } from "react-router-dom";
 import Mask1 from "../assets/images/kebab-set-table 1.jpg";
 import Mask2 from "../assets/images/Mask group.jpg";
 import Mask3 from "../assets/images/Mask group-1.jpg";
@@ -22,6 +22,7 @@ import { motion,AnimatePresence, easeIn, easeInOut } from "motion/react"
 import { NavLink } from "react-router-dom";
 
 const Home = () => {
+
 
 const CardData = [
     {
