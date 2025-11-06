@@ -13,18 +13,16 @@ import Dish2 from "../assets/images/F-1.png";
 import T1 from "../assets/images/T-1.png";
 import T2 from "../assets/images/T-2.png";
 import T3 from "../assets/images/T-3.png";
-import burger from "../assets/images/Burger.png"
-import pizza from "../assets/images/Pizza.png"
-import cupcake from "../assets/images/cup-cake.png"
-import ParmesanTruffleFries from "../assets/images/Parmesan Truffle Fries.png"
-import friedchicken from "../assets/images/fried-chicken.png"
-import { motion,AnimatePresence, easeIn, easeInOut } from "motion/react"
+import burger from "../assets/images/Burger.png";
+import pizza from "../assets/images/Pizza.png";
+import cupcake from "../assets/images/cup-cake.png";
+import ParmesanTruffleFries from "../assets/images/Parmesan Truffle Fries.png";
+import friedchicken from "../assets/images/fried-chicken.png";
+import { motion, AnimatePresence, easeIn, easeInOut } from "motion/react";
 import { NavLink } from "react-router-dom";
 
 const Home = () => {
-
-
-const CardData = [
+  const CardData = [
     {
       id: 1,
       tittle: "Breakfast",
@@ -47,7 +45,7 @@ const CardData = [
             <path
               d="M10 5V12"
               stroke="#474747"
-             strokeWidth="5"
+              strokeWidth="5"
               strokeLinecap="round"
               strokeLinejoin="round"
             />
@@ -165,7 +163,6 @@ const CardData = [
     },
   ];
 
-
   const CardData1 = [
     {
       id: 1,
@@ -196,92 +193,88 @@ const CardData = [
     },
   ];
 
-  const testimonialData = 
-    [
-      {
-        id: 1,
-        img: T1,
-        desc: `Last night, we dined at place and were simply blown away. From the moment we stepped in,
+  const testimonialData = [
+    {
+      id: 1,
+      img: T1,
+      desc: `Last night, we dined at place and were simply blown away. From the moment we stepped in,
          we were enveloped in an inviting atmosphere and greeted with warm smiles.`,
-        title: "“The best restaurant”",
-        name: "Sophire Robson",
-        address: "Los Angeles, CA",
-      },
+      title: "“The best restaurant”",
+      name: "Sophire Robson",
+      address: "Los Angeles, CA",
+    },
 
-      {
-        id: 2,
-        img: T2,
-        desc: `Place exceeded my expectations on all fronts. The ambiance was cozy and relaxed, making it a perfect venue for
+    {
+      id: 2,
+      img: T2,
+      desc: `Place exceeded my expectations on all fronts. The ambiance was cozy and relaxed, making it a perfect venue for
          our anniversary dinner. Each dish was prepared and beautifully presented.`,
-        title: "“Simply delicious”",
-        name: "Matt Cannon",
-        address: "San Diego, CA",
-      },
+      title: "“Simply delicious”",
+      name: "Matt Cannon",
+      address: "San Diego, CA",
+    },
 
-      {
-        id: 3,
-        img: T3,
-        desc: `The culinary experience at place is first to none. The atmosphere is vibrant,
+    {
+      id: 3,
+      img: T3,
+      desc: `The culinary experience at place is first to none. The atmosphere is vibrant,
          the food - nothing short of extraordinary. The food was the highlight of our evening. Highly recommended.`,
-        title: "“One of a kind restaurant”",
-        name: "Andy Smith",
-        address: "San Francisco, CA",
-      }
+      title: "“One of a kind restaurant”",
+      name: "Andy Smith",
+      address: "San Francisco, CA",
+    },
+  ];
 
-    ];
-
-    const blogData1 = [
-
-      {
-      id:1,
-      img:burger,
-      date:"January 3, 2023",
-      title:"The secret tips & tricks to prepare a perfect burger & pizza for our customers",
-      desc:`Lorem ipsum dolor sit amet consectetur of a adipiscing elitilmim semper adipiscing
-       massa gravida nisi cras enim quis nibholm varius amet gravida ut facilisis neque egestas.`
-    }
-
-    ];
+  const blogData1 = [
+    {
+      id: 1,
+      img: burger,
+      date: "January 3, 2023",
+      title:
+        "The secret tips & tricks to prepare a perfect burger & pizza for our customers",
+      desc: `Lorem ipsum dolor sit amet consectetur of a adipiscing elitilmim semper adipiscing
+       massa gravida nisi cras enim quis nibholm varius amet gravida ut facilisis neque egestas.`,
+    },
+  ];
 
   const blogCardsData = [
-
     {
-      id:1,
-      img:ParmesanTruffleFries,
-      date:"January 3, 2023",
-      title:"How to prepare the perfect french fries in an air fryer",
-      desc:`Lorem ipsum dolor sit amet consectetur of a adipiscing elitilmim semper adipiscing
-       massa gravida nisi cras enim quis nibholm varius amet gravida ut facilisis neque egestas.`
+      id: 1,
+      img: ParmesanTruffleFries,
+      date: "January 3, 2023",
+      title: "How to prepare the perfect french fries in an air fryer",
+      desc: `Lorem ipsum dolor sit amet consectetur of a adipiscing elitilmim semper adipiscing
+       massa gravida nisi cras enim quis nibholm varius amet gravida ut facilisis neque egestas.`,
     },
 
     {
-      id:2,
-      img:friedchicken,
-      date:"January 3, 2023",
-      title:"How to prepare delicious chicken tenders",
-      desc:`Lorem ipsum dolor sit amet consectetur of a adipiscing elitilmim semper adipiscing
-       massa gravida nisi cras enim quis nibholm varius amet gravida ut facilisis neque egestas.`
+      id: 2,
+      img: friedchicken,
+      date: "January 3, 2023",
+      title: "How to prepare delicious chicken tenders",
+      desc: `Lorem ipsum dolor sit amet consectetur of a adipiscing elitilmim semper adipiscing
+       massa gravida nisi cras enim quis nibholm varius amet gravida ut facilisis neque egestas.`,
     },
 
     {
-      id:3,
-      img:cupcake,
-      date:"January 3, 2023",
-      title:"7 delicious cheesecake recipes you can prepare",
-      desc:`Lorem ipsum dolor sit amet consectetur of a adipiscing elitilmim semper adipiscing
-       massa gravida nisi cras enim quis nibholm varius amet gravida ut facilisis neque egestas.`
+      id: 3,
+      img: cupcake,
+      date: "January 3, 2023",
+      title: "7 delicious cheesecake recipes you can prepare",
+      desc: `Lorem ipsum dolor sit amet consectetur of a adipiscing elitilmim semper adipiscing
+       massa gravida nisi cras enim quis nibholm varius amet gravida ut facilisis neque egestas.`,
     },
 
     {
-      id:4,
-      img:pizza,
-      date:"January 3, 2023",
-      title:"5 great pizza restaurants you should visit this city",
-      desc:`Lorem ipsum dolor sit amet consectetur of a adipiscing elitilmim semper adipiscing
-       massa gravida nisi cras enim quis nibholm varius amet gravida ut facilisis neque egestas.`
+      id: 4,
+      img: pizza,
+      date: "January 3, 2023",
+      title: "5 great pizza restaurants you should visit this city",
+      desc: `Lorem ipsum dolor sit amet consectetur of a adipiscing elitilmim semper adipiscing
+       massa gravida nisi cras enim quis nibholm varius amet gravida ut facilisis neque egestas.`,
     },
-  ]
- 
+  ];
+
   return (
     <>
       {/* HERO SECTION STARTED  */}
@@ -296,52 +289,49 @@ const CardData = [
     circle w-[100%] h-full rounded-full md:px-6"
           >
             <div className=" px-2 w-[100%] h-[60%]">
-              <motion.h2 
-              initial={{ opacity: 0, y: -100 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.9, ease: "easeOut" }}
+              <motion.h2
+                initial={{ opacity: 0, y: -100 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.9, ease: "easeOut" }}
                 className="text-secondary text-4xl
          md:text-6xl py-10 font-dmsans-reg tracking-wider text-center"
               >
                 Best food for your taste
               </motion.h2>
 
-              <motion.p 
-              initial={{ opacity: 0, y: 40 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 1, ease: "easeOut" }}
-              className="text-secondary font-dmsans text-center tracking-tighter  md:tracking-widest">
+              <motion.p
+                initial={{ opacity: 0, y: 40 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 1, ease: "easeOut" }}
+                className="text-secondary font-dmsans text-center tracking-tighter  md:tracking-widest"
+              >
                 Discover delectable cuisine and unforgettable moments in our
                 welcoming, culinary haven.
               </motion.p>
 
-              <motion.div initial={{ y: 70, opacity: 0 }}
-                    animate={{ y: 0, opacity: 1 }}
-                    transition={{ duration: 0.7, ease: "easeIn" }}
-              className="buttons my-8 space-x-10 flex justify-center items-center">
-               
-              <NavLink to='/booktable'>
-                <button           
-                  className="font-dmsans cursor-pointer border px-4
+              <motion.div
+                initial={{ y: 70, opacity: 0 }}
+                animate={{ y: 0, opacity: 1 }}
+                transition={{ duration: 0.7, ease: "easeIn" }}
+                className="buttons my-8 space-x-10 flex justify-center items-center"
+              >
+                <NavLink to="/booktable">
+                  <button
+                    className="font-dmsans cursor-pointer border px-4
            py-3 rounded-3xl text-[#F9F9F7] bg-red-primary transition-all duration-300 ease-in-out
             hover:scale-95 hover:bg-[#991e28]"
-                >
-                  Book A Table
-                </button>
-              </NavLink>
-              
+                  >
+                    Book A Table
+                  </button>
+                </NavLink>
 
                 <Link to="/menu">
-               
-
                   <button
-                    
                     className="font-dmsans cursor-pointer hover:scale-95 border px-3 md:px-4 py-3 rounded-3xl
           transition-all duration-300 ease-in-out hover:bg-primary hover:text-white "
                   >
                     Explore Menu
                   </button>
-               
                 </Link>
               </motion.div>
             </div>
@@ -364,15 +354,18 @@ const CardData = [
           lg:grid-cols-2 lg:grid-rows-2 xl:grid-rows-1 xl:grid-cols-4 space-y-4 space-x-4 w-[90%] h-auto px-4 py-5"
           >
             {CardData.map((items, index) => {
-
-            return ( 
-            <Cards key={items.id} tittle={items.tittle} img ={items.img}
-              desc={items.desc} Explore={true} imgs={true} images={false}
-            />
-         );
-      })}
-
-
+              return (
+                <Cards
+                  key={items.id}
+                  tittle={items.tittle}
+                  img={items.img}
+                  desc={items.desc}
+                  Explore={true}
+                  imgs={true}
+                  images={false}
+                />
+              );
+            })}
           </div>
         </div>
       </section>
@@ -533,7 +526,10 @@ const CardData = [
           >
             {CardData1.map((items, index) => {
               return (
-                <div key={items.id} className="m-4 cursor-pointer hover:scale-95 transition-all ease-in-out duration-300">
+                <div
+                  key={items.id}
+                  className="m-4 cursor-pointer hover:scale-95 transition-all ease-in-out duration-300"
+                >
                   <div
                     className="shadow-2xl flex flex-col items-center justify-center
       px-2 py-2 text-center w-[98%] h-[100%]  rounded-2xl"
@@ -568,7 +564,6 @@ const CardData = [
         <div className="flex flex-col md:flex-row lg:items-center lg:flex-grow  lg:h-[80%] w-full md:w-[90%]">
           <div className="left h-auto flex items-center justify-center p-4 w-auto">
             <div className="md:w-[90%] grid sm:grid-cols-2 sm:grid-rows-1 md:grid-cols-2 md:grid-rows-1 gap-4 md:gap-1">
-              
               <img
                 className="rounded-2xl overflow-hidden object-cover w-full h-auto "
                 src={Chef}
@@ -685,44 +680,38 @@ const CardData = [
           </div>
 
           <div className="mt-6 grid grid-cols-1 grid-rows-3 gap-8 md:grid-cols-2 md:grid-rows-2 lg:grid-cols-3 lg:grid-rows-1">
-            {testimonialData.map((items,index)=>{
+            {testimonialData.map((items, index) => {
               return (
-                <div key={items.id} className="m-4 cursor-pointer hover:scale-95 transition-all ease-in-out duration-300">
+                <div
+                  key={items.id}
+                  className="m-4 cursor-pointer hover:scale-95 transition-all ease-in-out duration-300"
+                >
                   <div
                     className="shadow-2xl flex flex-col items-center justify-center
                               px-2 py-12 text-center w-[100%] h-[100%]  rounded-2xl"
                   >
                     <div className="px-2 py-2 text-left w-full">
-
                       <h3 className="font-dmsans text-red-primary text-2xl">
                         {items.title}
                       </h3>
-
                     </div>
 
                     <div className="px-2 py-4">
-                      <p className="text-[#414536] font-dmsans tracking-wide py-4 text-left">{items.desc}</p>
-                    </div>
-
-                    <div className="flex items-center ">
-                     <img
-                      src={items.img}
-                      
-                      alt="customerImg"
-                    /> 
-                    <div className="flex flex-col px-4">
-
-                      <h4 className="text-xl font-dmsans">
-                        {items.name}
-                      </h4>
-
-                      <p className="font-dmsans text-[#414536]">
-                        {items.address}
+                      <p className="text-[#414536] font-dmsans tracking-wide py-4 text-left">
+                        {items.desc}
                       </p>
                     </div>
 
-                    </div>
+                    <div className="flex items-center ">
+                      <img src={items.img} alt="customerImg" />
+                      <div className="flex flex-col px-4">
+                        <h4 className="text-xl font-dmsans">{items.name}</h4>
 
+                        <p className="font-dmsans text-[#414536]">
+                          {items.address}
+                        </p>
+                      </div>
+                    </div>
                   </div>
                 </div>
               );
@@ -733,105 +722,99 @@ const CardData = [
 
       {/* testimonial section ended here  */}
 
-
       {/* Our Blogs And Articles section Started  */}
 
-        <section className="h-auto mt-24 flex justify-center items-center">
-            <div className=" h-[90%] w-[97%] md:w-[90%]">
+      <section className="h-auto mt-24 flex justify-center items-center">
+        <div className=" h-[90%] w-[97%] md:w-[90%]">
+          <div className="md:flex items-center justify-between py-4 px-2">
+            <h3 className="font-playfair text-2xl md:text-4xl px-3 text-center">
+              Our Blog & Articles
+            </h3>
 
-              <div className="md:flex items-center justify-between py-4 px-2">
-                <h3 className="font-playfair text-2xl md:text-4xl px-3 text-center">
-                  Our Blog & Articles
-                </h3>
-
-                <div className="text-center my-8">
-                  <NavLink to='/blogs'>
-                <button className="cursor-pointer font-dmsans text-white bg-red-primary 
+            <div className="text-center my-8">
+              <NavLink to="/blogs">
+                <button
+                  className="cursor-pointer font-dmsans text-white bg-red-primary 
                           transition-all duration-300 ease-in-out hover:text-gray-200 active:scale-95 hover:scale-95
-                           hover:bg-[#991e28] rounded-4xl py-4 px-4">
+                           hover:bg-[#991e28] rounded-4xl py-4 px-4"
+                >
                   Read All Articles
                 </button>
-                  </NavLink>
-                </div>
-
-              </div>
-
-              <div className="grid grid-cols-1 grid-row-5 md:grid-cols-1
-               md:grid-row-2 lg:grid-cols-2 lg:grid-row-1">
-                <div className="">
-                  {blogData1.map((items , index)=>{
-                  return (
-              <Link key={items.id} to='/blogs'>
-              
-                <div  className="m-4 cursor-pointer hover:scale-95 transition-all ease-in-out duration-300">
-                  <div
-                    className="shadow-2xl flex flex-col items-center justify-center
-                              px-2 py-12 text-center w-[100%] h-[100%]  rounded-2xl"
-                  >
-                    <div className="px-2 py-2 text-left w-full">
-                     <img className="rounded-2xl"
-                      src={items.img}
-                      
-                      alt="customerImg"
-                    /> 
-                    <p className="py-3">
-                      {items.date}
-                    </p>
-
-                      <h3 className="font-dmsans text-secondary text-2xl">
-                        {items.title}
-                      </h3>
-
-
-                    <div className="px-2 py-4">
-                      <p className="text-[#414536] font-dmsans tracking-wide py-4 text-left">{items.desc}</p>
-                    </div>
-
-
-                    </div>
-                  </div>
-                </div></Link>
-              );
-                })}
-                </div>
-
-                <div className="grid md:grid-cols-2 md:grid-rows-2 lg:grid-cols-2 lg:grid-rows-2">
-
-                {blogCardsData.map((items , index)=>{
-                  return (
-                <div key={items.id} className="m-4 cursor-pointer hover:scale-95 transition-all ease-in-out duration-300">
-                  <div
-                    className="shadow-2xl flex flex-col items-center justify-center
-                              px-2 py-12 text-center w-[100%] h-[100%]  rounded-2xl"
-                  >
-                    <div className="px-2 py-2 text-left w-full">
-                     <img className="rounded-2xl"
-                      src={items.img}
-                      
-                      alt="customerImg"
-                    /> 
-                    <p className="py-3">
-                      {items.date}
-                    </p>
-
-                      <h3 className="font-dmsans text-secondary text-2xl">
-                        {items.title}
-                      </h3>
-
-
-                    </div>
-                  </div>
-                </div>
-              );
-                })}
-                </div>
-              </div>
-
+              </NavLink>
             </div>
-        </section>
+          </div>
+
+          <div
+            className="grid grid-cols-1 grid-row-5 md:grid-cols-1
+               md:grid-row-2 lg:grid-cols-2 lg:grid-row-1"
+          >
+            <div className="">
+              {blogData1.map((items, index) => {
+                return (
+                  <Link key={items.id} to="/blogs">
+                    <div className="m-4 cursor-pointer hover:scale-95 transition-all ease-in-out duration-300">
+                      <div
+                        className="shadow-2xl flex flex-col items-center justify-center
+                              px-2 py-12 text-center w-[100%] h-[100%]  rounded-2xl"
+                      >
+                        <div className="px-2 py-2 text-left w-full">
+                          <img
+                            className="rounded-2xl"
+                            src={items.img}
+                            alt="customerImg"
+                          />
+                          <p className="py-3">{items.date}</p>
+
+                          <h3 className="font-dmsans text-secondary text-2xl">
+                            {items.title}
+                          </h3>
+
+                          <div className="px-2 py-4">
+                            <p className="text-[#414536] font-dmsans tracking-wide py-4 text-left">
+                              {items.desc}
+                            </p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </Link>
+                );
+              })}
+            </div>
+
+            <div className="grid md:grid-cols-2 md:grid-rows-2 lg:grid-cols-2 lg:grid-rows-2">
+              {blogCardsData.map((items, index) => {
+                return (
+                  <div
+                    key={items.id}
+                    className="m-4 cursor-pointer hover:scale-95 transition-all ease-in-out duration-300"
+                  >
+                    <div
+                      className="shadow-2xl flex flex-col items-center justify-center
+                              px-2 py-12 text-center w-[100%] h-[100%]  rounded-2xl"
+                    >
+                      <div className="px-2 py-2 text-left w-full">
+                        <img
+                          className="rounded-2xl"
+                          src={items.img}
+                          alt="customerImg"
+                        />
+                        <p className="py-3">{items.date}</p>
+
+                        <h3 className="font-dmsans text-secondary text-2xl">
+                          {items.title}
+                        </h3>
+                      </div>
+                    </div>
+                  </div>
+                );
+              })}
+            </div>
+          </div>
+        </div>
+      </section>
 
       {/* Our Blogs And Articles section ended  */}
-
     </>
   );
 };
