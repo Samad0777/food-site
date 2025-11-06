@@ -19,9 +19,11 @@ Focus on writing clean, reusable components
 ✅ About page Completed
 ✅ Menu page is Completed
 ✅ Book Table page is Adedd
-🚧 Blog page is ongoing
-🚧 Responsive layout (applied on completed sections, rest ongoing)
-🚧 Contact Page is ongoing
+✅ Blog page is ongoing
+✅ Responsive layout 
+✅ Contact Page is ongoing
+✅UI is complete
+🚧Functional components isn't complete like Forms and etc.
 
 🎯 Why this project?
 

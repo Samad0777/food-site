@@ -1,5 +1,5 @@
 import React from "react";
-import { useLoaderData, useParams } from "react-router-dom";
+import { NavLink, useLoaderData, useParams } from "react-router-dom";
 import Roll from "../assets/images/roll.png";
 import Baking from "../assets/images/baking.png";
 import CheeseCake from "../assets/images/cheesecake.png";
@@ -12,103 +12,98 @@ import Gadgets from "../assets/images/cooking-gadgets.png";
 import Noodles from "../assets/images/noodles.png";
 import Desserts from "../assets/images/desserts.png";
 import Sushi from "../assets/images/sushi.png";
+import { Link } from "react-router-dom";
 
 const BlogDescrip = () => {
-
   const DataList = [
-      {
-        id: 1,
-        img: Sushi,
-        year: "January 3, 2023",
-        desc: "How to prepare a delicious gluten free sushi",
-      },
-  
-      {
-        id: 2,
-        img: Baking,
-        year: "January 3, 2023",
-        desc: "Exclusive baking lessons from the pastry king",
-      },
-  
-      {
-        id: 3,
-        img: Fri,
-        year: "January 3, 2023",
-        desc: "How to prepare the perfect fries in an air fryer",
-      },
-  
-      {
-        id: 4,
-        img: ChickenTender,
-        year: "January 3, 2023",
-        desc: "How to prepare delicious chicken tenders",
-      },
-  
-      {
-        id: 5,
-        img: Choco,
-        year: "January 3, 2023",
-        desc: "5 great cooking gadgets you can buy to save time",
-      },
-  
-      {
-        id: 6,
-        img: PerfectBurger,
-        year: "January 3, 2023",
-        desc: "The secret tips & tricks to prepare a perfect burger",
-      },
-  
-      {
-        id: 7,
-        img: CheeseCake,
-        year: "January 3, 2023",
-        desc: "7 delicious cheesecake recipes you can prepare",
-      },
-  
-      {
-        id: 8,
-        img: Pizza,
-        year: "January 3, 2023",
-        desc: "5 great pizza restaurants you should visit this city",
-      },
-  
-      {
-        id: 9,
-        img: Gadgets,
-        year: "January 3, 2023",
-        desc: "5 great cooking gadgets you can buy to save time",
-      },
-  
-      {
-        id: 10,
-        img: Roll,
-        year: "January 3, 2023",
-        desc: "How to prepare a delicious gluten free sushi",
-      },
-  
-      {
-        id: 11,
-        img: Noodles,
-        year: "January 3, 2023",
-        desc: "Top 20 simple and quick desserts for kids",
-      },
-  
-      {
-        id: 12,
-        img: Desserts,
-        year: "January 3, 2023",
-        desc: "Top 20 simple and quick desserts for kids",
-      },
-    ];
+    {
+      id: 1,
+      img: Sushi,
+      year: "January 3, 2023",
+      desc: "How to prepare a delicious gluten free sushi",
+    },
 
-const { productID } = useParams();
+    {
+      id: 2,
+      img: Baking,
+      year: "January 3, 2023",
+      desc: "Exclusive baking lessons from the pastry king",
+    },
 
-  
-  const blog = DataList.find(item => item.id === Number(productID));
+    {
+      id: 3,
+      img: Fri,
+      year: "January 3, 2023",
+      desc: "How to prepare the perfect fries in an air fryer",
+    },
 
-  console.log(blog);
-  
-  
+    {
+      id: 4,
+      img: ChickenTender,
+      year: "January 3, 2023",
+      desc: "How to prepare delicious chicken tenders",
+    },
+
+    {
+      id: 5,
+      img: Choco,
+      year: "January 3, 2023",
+      desc: "5 great cooking gadgets you can buy to save time",
+    },
+
+    {
+      id: 6,
+      img: PerfectBurger,
+      year: "January 3, 2023",
+      desc: "The secret tips & tricks to prepare a perfect burger",
+    },
+
+    {
+      id: 7,
+      img: CheeseCake,
+      year: "January 3, 2023",
+      desc: "7 delicious cheesecake recipes you can prepare",
+    },
+
+    {
+      id: 8,
+      img: Pizza,
+      year: "January 3, 2023",
+      desc: "5 great pizza restaurants you should visit this city",
+    },
+
+    {
+      id: 9,
+      img: Gadgets,
+      year: "January 3, 2023",
+      desc: "5 great cooking gadgets you can buy to save time",
+    },
+
+    {
+      id: 10,
+      img: Roll,
+      year: "January 3, 2023",
+      desc: "How to prepare a delicious gluten free sushi",
+    },
+
+    {
+      id: 11,
+      img: Noodles,
+      year: "January 3, 2023",
+      desc: "Top 20 simple and quick desserts for kids",
+    },
+
+    {
+      id: 12,
+      img: Desserts,
+      year: "January 3, 2023",
+      desc: "Top 20 simple and quick desserts for kids",
+    },
+  ];
+
+  const { productID } = useParams();
+
+  const blog = DataList.find((item) => item.id === Number(productID));
 
   return (
     <>
@@ -121,15 +116,15 @@ const { productID } = useParams();
         </div>
 
         <div className="p-10 w-[90vw] h-[100vw] md:h-[100vh]">
-          <img src={blog.img} alt="img" className="w-[100%] h-[100%]"/>
+          <img src={blog.img} alt="img" className="w-[100%] h-[100%]" />
         </div>
 
-        <div className="m-10">
+        <div className="m-10 text-[#414536]">
           <div>
             <h3 className="text-secondary font-dmsans font-bold mt-4 mb-4">
               What do you need to prepare a home-made burger?
             </h3>
-            <p className="mb-6">
+            <p className="mb-6 ">
               Creating the perfect burger and pizza is an art, combining
               ingredients, techniques, and passion to craft dishes that truly
               delight the palate. Today, we'll unveil some closely guarded
@@ -219,10 +214,10 @@ const { productID } = useParams();
         </div>
 
         <div className="p-10 w-[90vw] h-[100vw] md:h-[100vh]">
-          <img src={blog.img} alt="img"  className="w-[100%] h-[100%]"/>
+          <img src={blog.img} alt="img" className="w-[100%] h-[100%]" />
         </div>
 
-        <div className="m-10">
+        <div className="m-10 text-[#414536]">
           <h3 className="text-secondary font-dmsans font-bold mt-4 mb-4">
             What are the right ingredients to make it delicious?
           </h3>
@@ -239,14 +234,27 @@ const { productID } = useParams();
           </p>
         </div>
 
-        <div className="m-10 border">
-        <div className="text-center">
-          <h2>Read More Articles</h2>
-          <p>
-            We consider all the drivers of change gives you the components you
-            need to change to create a truly happens.
-          </p>
-            </div>
+        <div className="m-10">
+          <div className="text-center space-y-6">
+            <h2 className="font-playfair text-2xl md:text-5xl">
+              Read More Articles
+            </h2>
+            <p>
+              We consider all the drivers of change gives you the components you
+              need to change to create a truly happens.
+            </p>
+          </div>
+          <div className="text-center mt-10">
+            <Link to="/blogs">
+              <button
+                className="font-dmsans cursor-pointer border px-4
+           py-3 rounded-3xl text-[#F9F9F7] bg-red-primary transition-all duration-300 ease-in-out
+           hover:scale-105  hover:bg-[#991e28]"
+              >
+                Go Back
+              </button>
+            </Link>
+          </div>
         </div>
       </section>
     </>

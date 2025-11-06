@@ -68,13 +68,13 @@ const Navbar = () => {
     <nav className='relative  md:hidden flex justify-between items-center border px-2 py-4'>
 
 
-    <div className="logo flex items-center">
+    <NavLink to='/' className="logo flex items-center">
             <img className='h-7'
              src={logo} alt="logo" /> 
             <h2 className='font-semibold text-2xl px-2 text-primary'>
                 Bistro Bliss
             </h2>
-        </div>
+        </NavLink>
 
       <div>
         <button onClick={()=>{

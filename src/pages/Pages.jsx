@@ -15,7 +15,7 @@ import Sushi from "../assets/images/sushi.png";
 import { NavLink } from "react-router-dom";
 
 const Pages = () => {
- const DataList = [
+  const DataList = [
     {
       id: 1,
       img: Sushi,
@@ -104,7 +104,7 @@ const Pages = () => {
     <>
       <section className="h-auto">
         <div className="h-auto text-center py-4 px-6">
-          <h1 className="text-3xl font-playfair text-secondary md:text-7xl">
+          <h1 className="text-3xl font-playfair text-secondary md:text-6xl">
             Our Blog & Articles
           </h1>
           <p className="text-[#414536] py-6 font-dmsans">
@@ -113,30 +113,30 @@ const Pages = () => {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4">
           {DataList.map((items, index) => (
             <div
               key={items.id}
-              className="m-4 h-full w-fit  rounded-xl cursor-pointer hover:scale-95 transition-all ease-in-out duration-300 "
+              className="m-4 pt-10 h-full w-fit  rounded-xl cursor-pointer hover:scale-95 transition-all ease-in-out duration-300 "
             >
               <NavLink to={`/blogs/${items.id}`}>
-              <div
-                className="shadow-2xl flex flex-col items-center justify-center active:scale-95
+                <div
+                  className="shadow-2xl flex flex-col items-center justify-center active:scale-95
                               px-2 text-center w-[100%] h-[100%]  rounded-2xl"
-              >
-                <div className="px-2 py-2 text-left w-full">
-                  <img
-                    className="rounded-2xl w-full"
-                    src={items.img}
-                    alt="customerImg"
-                  />
-                  <p className="py-3">{items.year}</p>
+                >
+                  <div className="px-2 py-2 text-left w-full">
+                    <img
+                      className="rounded-2xl w-full"
+                      src={items.img}
+                      alt="customerImg"
+                    />
+                    <p className="py-3">{items.year}</p>
 
-                  <h3 className="font-dmsans text-secondary text-2xl">
-                    {items.desc}
-                  </h3>
+                    <h3 className="font-dmsans text-secondary text-2xl">
+                      {items.desc}
+                    </h3>
+                  </div>
                 </div>
-              </div>
               </NavLink>
             </div>
           ))}
